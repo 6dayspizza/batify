@@ -41,7 +41,7 @@ body.dark-mode header {
 
 body.dark-mode .background {
   background-color: var(--greyish);
-  color: var(--almost-black);
+  color: var(--almost-black) !important;
 }
 
 
@@ -65,7 +65,7 @@ a.active {
   font-weight: bold;
   text-decoration: none;
   padding: 3px 12px;
-  width: 100px;
+  width: 128px;
 
 }
 
@@ -173,7 +173,7 @@ aside {
   display: inline-block;
   display: inline-flex;
   justify-content: center;
-  line-height: 47px;
+  /* line-height: 47px; */
   border-radius: 25px;
 }
 
@@ -319,7 +319,7 @@ ins {
 .faq {
     text-align: left;
     font-weight: 300;
-    padding: 1% 1%;
+    padding: 1% 1.4%;
     background-color: white;
     margin: 0 auto; /* Center the div horizontally */
     color: var(--almost-black);
@@ -327,7 +327,6 @@ ins {
     overflow: hidden;
     font-family: "Comic Neue", cursive;
     font-weight: 300;
-    font-size: 110%;
     font-style: normal;
     display: none;
 }
