@@ -1,0 +1,258 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+{{> header}}
+
+<!--     
+    Citation for the following function: 
+    Date: 10/12/2023
+    Partially based on: code from Dr. Curry
+    Source URL: https://github.com/osu-cs340-ecampus/nodejs-starter-app 
+-->
+
+<main>
+
+  {{!-- DISPLAY PAGE 1 OF FORM --}}
+  <div id="page1">
+    <div class="background">
+      <table>
+        <div class="space"></div>
+            <tr>
+                <td class="align-right">species</td>
+                <td class="center-text">|</td>
+                <td class="align-left">
+                    <select id="species" name="species">
+                        <option value="unknown">unknown</option>
+                        <option value="Hypsugo savii">Hypsugo savii</option>
+                        <option value="Pipistrellus pipistrellus">Pipistrellus pipistrellus</option>
+                        <option value="Pipistrellus kuhlii">Pipistrellus kuhlii</option>
+                        <option value="Nyctalus noctula">Nyctalus noctula</option>
+                        <option value="Myotis bechsteinii">Myotis bechsteinii</option>
+                        <option value="Myotis myotis">Myotis myotis</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="align-right">sex</td>
+                <td class="center-text">|</td>
+                <td class="align-left">
+                    <select id="sex" name="sex">
+                        <option value="unknown">unknown</option>
+                        <option value="male">male</option>
+                        <option value="female">female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="align-right">development stage</td>
+                <td class="center-text">|</td>
+                <td class="align-left">
+                    <select id="age" name="age">
+                        <option value="unknown">unknown</option>
+                        <option value="baby">baby</option>
+                        <option value="teenager">teenager</option>
+                        <option value="adult">adult</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+            </tr>
+        </table>
+      </div>
+          <div class="space"></div>
+    <div class="flex-container">
+        <div></div>
+    <button class="next" onClick="nextPage('page2')">NEXT</button>
+    </div>
+
+    </div>
+  
+  {{!-- DISPLAY PAGE 2 OF FORM --}}
+  <div id="page2" style="display: none">
+    <div class="background">
+      <table>
+                <div class="space"></div>
+            <tr>
+                <td class="align-right">weight</td>
+                <td class="center-text">|</td>
+                <td class="align-left">
+                    <select id="weight" name="weight">
+                        <option value="unknown">unknown</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="align-right">physical condition</td>
+                <td class="center-text">|</td>
+                <td class="align-left">
+                    <select id="condition" name="condition">
+                        <option value="unknown">underweight</option>
+                        <option value="male">optimal</option>
+                        <option value="female">overweight</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="align-right">behavior</td>
+                <td class="center-text">|</td>
+                <td class="align-left">
+                    <select id="behavior" name="behavior">
+                        <option value="appropriate">appropriate</option>
+                        <option value="apathic">apathic</option>
+                        <option value="aggressive">aggressive</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+            </tr>
+            <!-- Add more rows as needed -->
+        </table>
+      </div>
+    <div class="space"></div>
+        <div class="flex-container">
+    <button class="back" onClick="nextPage('page1')">BACK</button><button class="next" onClick="nextPage('page3')">NEXT</button>
+  </div>
+  </div>
+
+  {{!-- DISPLAY PAGE 3 OF FORM --}}
+  <div id="page3" style="display: none">
+        <div class="background">
+    <table>
+                <div class="space"></div>
+            <tr>
+                <td class="align-right">skeleton</td>
+                <td class="center-text">|</td>
+                <td class="align-left">
+                    <select id="skeleton" name="skeleton">
+                        <option value="intact">intact</option>
+                        <option value="broken">fractured</option>
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="align-right">injuries</td>
+                <td class="center-text">|</td>
+                <td class="align-left">
+                    <select id="injuries" name="injuries">
+                        <option value="unknown">none visible</option>
+                        <option value="male">blood present</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+            </tr>
+        </table>
+    </div>
+    <div class="space"></div>
+        <div class="flex-container">
+          <button class="back" onClick="nextPage('page2')">BACK</button><button class="next" onClick="nextPage('page4')">NEXT</button>
+  </div>
+  </div>
+
+  {{!-- DISPLAY PAGE 4 OF FORM --}}
+  <div id="page4" style="display: none">
+    <div class="background">
+                <table>
+                <tr>
+                    <td class="align-right"><p>SUMMARY</p></td>
+                    <td></td>
+                    <td class="align-left"></td>
+                </tr>
+            </table>
+            <div class="space"></div>
+            <table>
+                <tr>
+                    <td class="align-right">species</td>
+                    <td class="center-text">|</td>
+                    <td class="align-left"><p>Myotis myotis</p></td>
+                </tr>
+                <tr>
+                    <td class="align-right">sex</td>
+                    <td class="center-text">|</td>
+                    <td class="align-left"><p>female</p></td>
+                </tr>
+                <tr>
+                    <td class="align-right">development stage</td>
+                    <td class="center-text">|</td>
+                    <td class="align-left"><p>baby</p></td>
+                </tr>
+                <tr>
+                    <td class="align-right">weight</td>
+                    <td class="center-text">|</td>
+                    <td class="align-left"><p>2.1 grams</p></td>
+                </tr>
+                                <tr>
+                    <td class="align-right">physical condition</td>
+                    <td class="center-text">|</td>
+                    <td class="align-left"><p>underweight</p></td>
+                </tr>
+                <tr>
+                    <td class="align-right">behavior</td>
+                    <td class="center-text">|</td>
+                    <td class="align-left"><p>appropriate</p></td>
+                </tr>
+                <tr>
+                    <td class="align-right">skeleton</td>
+                    <td class="center-text">|</td>
+                    <td class="align-left"><p>intact</p></td>
+                </tr>
+                <tr>
+                    <td class="align-right">injuries</td>
+                    <td class="center-text">|</td>
+                    <td class="align-left"><p>none visible</p></td>
+                </tr>
+    </table>
+      </div>
+    <div class="space"></div>
+        <div class="flex-container">
+    <button class="back" onClick="nextPage('page3')">BACK</button><button class="next" onClick="nextPage('summary')">FINISH</button>
+</div>
+  </div>
+
+  {{!-- DISPLAY SUMMARY OF FORM --}}
+  <div id="summary" style="display: none">
+            <div class="space"></div>
+        <div class="background">
+            <table>
+                <tr>
+                    <td class="align-right"><p>RECOMMENDED PROCEDURE</p></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="space"></div>
+            <table>
+                <tr>
+                    <td class="align-right">box</td>
+                    <td class="center-text">|</td>
+                    <td class="align-left"></td>
+                </tr>
+                <tr>
+                    <td class="align-right">nutrition</td>
+                    <td class="center-text">|</td>
+                    <td class="align-left"></td>
+                </tr>
+                <tr>
+                    <td class="align-right">assigned volunteer</td>
+                    <td class="center-text">|</td>
+                    <td class="align-left"><button class="confirm">notify</button></td>
+                </tr>
+                <tr>
+                    <td class="align-right">further actions</td>
+                    <td class="center-text">|</td>
+                    <td class="align-left"></td>
+                </tr>
+    </table>
+  </div>
+  </div>
+
+  <script>
+    document.getElementById('toggleDarkMode').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+    });
+</script>
+
+</main>
+
+
+{{!-- EMBEDED JAVASCRIPT DOCUMENTS --}}
+
