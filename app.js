@@ -4,11 +4,11 @@
 
 var express = require("express");
 var app = express();
+const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("views/public"));
 
-PORT = 1000;
 const { engine } = require("express-handlebars");
 var exphbs = require("express-handlebars");
 const hbs = exphbs.create({
@@ -49,10 +49,6 @@ app.get("/about", function(req, res) {
     LISTENER
 */
 
-app.listen(PORT, function () {
-  console.log(
-    "Express started on http://localhost:" +
-    PORT +
-    "; press Ctrl-C to terminate."
-  );
+app.listen(port, () => {
+  console.log(`Server is listening on port ${port}`);
 });
