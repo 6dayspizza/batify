@@ -44,3 +44,31 @@ function toggleAnswer(id) {
 document.getElementById('toggleDarkMode').addEventListener('click', function() {
   document.body.classList.toggle('dark-mode');
 });
+
+function displaySummary() {
+  // Get all the input values
+  var species = document.getElementById('species').value;
+  var sex = document.getElementById('sex').value;
+  var age = document.getElementById('age').value;
+  var weight = document.getElementById('weight').value;
+  var condition = document.getElementById('condition').value;
+  var behavior = document.getElementById('behavior').value;
+  var skeleton = document.getElementById('skeleton').value;
+  var injuries = document.getElementById('injuries').value;
+
+  // Populate the summary section with the gathered values
+  document.getElementById('summary-species').innerText = species;
+  document.getElementById('summary-sex').innerText = sex;
+  document.getElementById('summary-age').innerText = age;
+  document.getElementById('summary-weight').innerText = weight;
+  document.getElementById('summary-condition').innerText = condition;
+  document.getElementById('summary-behavior').innerText = behavior;
+  document.getElementById('summary-skeleton').innerText = skeleton;
+  document.getElementById('summary-injuries').innerText = injuries;
+
+  // Show the summary section
+  document.getElementById('summary').style.display = 'block';
+}
+
+// Add event listener to the FINISH button
+document.getElementById('finish-button').addEventListener('click', displaySummary);
