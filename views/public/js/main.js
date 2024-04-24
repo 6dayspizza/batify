@@ -71,4 +71,4 @@ function displaySummary() {
 }
 
 // Add event listener to the FINISH button
-document.getElementById('finish-button').addEventListener('click', displaySummary);
+document.getElementById('gotosummary').addEventListener('click', displaySummary);
