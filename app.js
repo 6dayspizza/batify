@@ -27,8 +27,12 @@ var db = require("./database/db-connector");
 */
 
 app.get("/", (req, res, next) => {
-  res.redirect(307, "/form");
+  res.redirect(307, "/welcome");
 });
+
+app.get("/welcome", function(req, res) {
+  res.render("welcome")
+})
 
 app.get("/form", function(req, res) {
   res.render("form")
