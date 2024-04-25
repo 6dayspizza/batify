@@ -84,9 +84,9 @@
                 <td class="center-text">|</td>
                 <td class="align-left">
                     <select id="condition" name="condition">
-                        <option value="unknown">underweight</option>
-                        <option value="male">optimal</option>
-                        <option value="female">overweight</option>
+                        <option value="underweight">underweight</option>
+                        <option value="optimal">optimal</option>
+                        <option value="overweight">overweight</option>
                     </select>
                 </td>
             </tr>
@@ -123,7 +123,7 @@
                 <td class="align-left">
                     <select id="skeleton" name="skeleton">
                         <option value="intact">intact</option>
-                        <option value="broken">fractured</option>
+                        <option value="fractured">fractured</option>
 
                     </select>
                 </td>
@@ -133,8 +133,8 @@
                 <td class="center-text">|</td>
                 <td class="align-left">
                     <select id="injuries" name="injuries">
-                        <option value="unknown">none visible</option>
-                        <option value="male">blood present</option>
+                        <option value="none visible">none visible</option>
+                        <option value="blood present">blood present</option>
                     </select>
                 </td>
             </tr>
@@ -144,7 +144,7 @@
     </div>
     <div class="space"></div>
         <div class="flex-container">
-          <button class="back" onClick="nextPage('page2')">BACK</button><button class="next" onClick="nextPage('page4')" id="gotosummary" >NEXT</button>
+          <button class="back" onClick="nextPage('page2')">BACK</button><button class="next" onClick="nextPage('page4')" id="gotosummary" >GO TO SUM</button>
   </div>
   </div>
 
@@ -168,48 +168,48 @@
                 <tr>
                     <td class="align-right">sex</td>
                     <td class="center-text">|</td>
-                    <td class="align-left"><p>female</p></td>
+                    <td class="align-left" id="summary-sex"></td>
                 </tr>
                 <tr>
                     <td class="align-right">development stage</td>
                     <td class="center-text">|</td>
-                    <td class="align-left"><p>baby</p></td>
+                    <td class="align-left" id="summary-age"></td>
                 </tr>
                 <tr>
                     <td class="align-right">weight</td>
                     <td class="center-text">|</td>
-                    <td class="align-left"><p>2.1 grams</p></td>
+                    <td class="align-left" id="summary-weight"></td>
                 </tr>
                                 <tr>
                     <td class="align-right">physical condition</td>
                     <td class="center-text">|</td>
-                    <td class="align-left"><p>underweight</p></td>
+                    <td class="align-left" id="summary-condition"></td>
                 </tr>
                 <tr>
                     <td class="align-right">behavior</td>
                     <td class="center-text">|</td>
-                    <td class="align-left"><p>appropriate</p></td>
+                    <td class="align-left" id="summary-behavior"></td>
                 </tr>
                 <tr>
                     <td class="align-right">skeleton</td>
                     <td class="center-text">|</td>
-                    <td class="align-left"><p>intact</p></td>
+                    <td class="align-left" id="summary-skeleton"></td>
                 </tr>
                 <tr>
                     <td class="align-right">injuries</td>
                     <td class="center-text">|</td>
-                    <td class="align-left"><p>none visible</p></td>
+                    <td class="align-left" id="summary-injuries"></td>
                 </tr>
     </table>
       </div>
     <div class="space"></div>
         <div class="flex-container">
-    <button class="back" onClick="nextPage('page3')">BACK</button><button class="next" onClick="nextPage('summary')">FINISH</button>
+    <button class="back" onClick="nextPage('page3')">BACK</button><button class="next" onClick="nextPage('recommendation')">FINISH</button>
 </div>
   </div>
 
   {{!-- DISPLAY SUMMARY OF FORM --}}
-  <div id="summary" style="display: none">
+  <div id="recommendation" style="display: none">
             <div class="space"></div>
         <div class="background">
             <table>

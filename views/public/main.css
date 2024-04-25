@@ -173,7 +173,7 @@ aside {
   display: inline-block;
   display: inline-flex;
   justify-content: center;
-  /* line-height: 47px; */
+  line-height: 47px;
   border-radius: 25px;
 }
 
@@ -728,6 +728,7 @@ object {
     .main_nav a {
       display: block; /* Make each button stack vertically */
       height: 20px;
+      line-height: 0;
     }
 
     header {

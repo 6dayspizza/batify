@@ -19,12 +19,12 @@ function showform(dostuff) {
       document.getElementById("page2").style.display = "none";
       document.getElementById("page3").style.display = "none";
       document.getElementById("page4").style.display = "block";
-    } else if (dostuff == "summary") {
+    } else if (dostuff == "recommendation") {
         document.getElementById("page1").style.display = "none";
         document.getElementById("page2").style.display = "none";
         document.getElementById("page3").style.display = "none";
         document.getElementById("page4").style.display = "none";
-        document.getElementById("summary").style.display = "block";
+        document.getElementById("recommendation").style.display = "block";
       }
   }
 
@@ -43,7 +43,7 @@ function toggleAnswer(id) {
 
 document.getElementById('toggleDarkMode').addEventListener('click', function() {
   document.body.classList.toggle('dark-mode');
-});
+ });
 
 function displaySummary() {
   // Get all the input values
@@ -71,5 +71,4 @@ function displaySummary() {
 }
 
 // Add event listener to the FINISH button
-console.log(document.getElementById('gotosummary'));
 document.getElementById('gotosummary').addEventListener('click', displaySummary);
