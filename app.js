@@ -46,7 +46,20 @@ app.get("/about", function(req, res) {
   res.render("about")
 })
 
+app.get('/stats', (req, res) => {
+  res.render('Stats', { speciesCount: speciesCount });
+});
 
+
+/*
+    FANCY EXTRAS
+*/
+
+const speciesCount = {
+  'Hypsugo savii': 10,
+  'Pipistrellus pipistrellus': 15,
+  // Add counts for other species...
+};
 
 
 /*

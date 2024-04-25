@@ -1,0 +1,21 @@
+{{> header}}
+
+<body>
+  <main>
+    <div class="background">
+    <table>
+      <div class="space"></div>
+        <tr>
+          <td class="align-right">species</td>
+          <td class="center-text">|</td>
+          <td class="align-left">{{#each speciesCount}}
+            <p>{{@key}}: {{this}}</p>
+            {{/each}}</td>
+      </tr>
+    </table>
+    </div>
+  </main>
+</body>
+
+
+{{! EMBEDED JAVASCRIPT DOCUMENTS }}
