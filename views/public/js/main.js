@@ -60,7 +60,7 @@ function displaySummary() {
   document.getElementById('summary-species').innerText = species;
   document.getElementById('summary-sex').innerText = sex;
   document.getElementById('summary-age').innerText = age;
-  document.getElementById('summary-weight').innerText = weight;
+  document.getElementById('summary-weight').innerText = weight + " g";
   document.getElementById('summary-condition').innerText = condition;
   document.getElementById('summary-behavior').innerText = behavior;
   document.getElementById('summary-skeleton').innerText = skeleton;
