@@ -154,7 +154,9 @@ aside {
 
 /*  ----- Navigation ----- Override text links for navigation only.  */
 
+/* Styles for main menu */
 .main_nav {
+  position: relative; /* Ensure submenu position is relative to main menu */
   text-align: left;
   font-family: "Comic Neue", cursive;
   font-weight: 300;
@@ -175,6 +177,23 @@ aside {
   justify-content: center;
   line-height: 47px;
   border-radius: 25px;
+}
+
+/* Styles for submenu */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 50px; /* Position submenu below main menu */
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.submenu.show {
+  display: block;
 }
 
 .main_nav a:hover,
@@ -316,11 +335,25 @@ ins {
     text-align: center;
 }
 
+.faq-background {
+  background-color: white;
+  margin: 0 auto; /* Center the div horizontally */
+  color: var(--almost-black);
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: left;
+  font-family: "Comic Neue", cursive;
+  font-weight: 300;
+  font-style: normal;
+  padding: 0.5% 3%;
+  font-weight: 600;
+}
+
 .faq {
     text-align: left;
     font-weight: 300;
     padding: 1% 1.4%;
-    background-color: white;
+    background-color: var(--greyish);
     margin: 0 auto; /* Center the div horizontally */
     color: var(--almost-black);
     border-radius: 12px;
@@ -330,6 +363,8 @@ ins {
     font-style: normal;
     display: none;
 }
+
+
 
 /*  ----- Table ----- */
 

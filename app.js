@@ -46,6 +46,14 @@ app.get("/about", function(req, res) {
   res.render("about")
 })
 
+app.get("/features", function(req, res) {
+  res.render("features")
+})
+
+app.get("/roadmap", function(req, res) {
+  res.render("roadmap")
+})
+
 app.get('/stats', (req, res) => {
   res.render('Stats', { speciesCount: speciesCount });
 });
