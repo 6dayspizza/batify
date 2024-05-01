@@ -202,7 +202,7 @@
       </div>
     <div class="space"></div>
         <div class="flex-container">
-    <button class="back" onClick="nextPage('page3')">BACK</button><button class="next" onClick="nextPage('recommendation')">FINISH</button>
+    <button class="back" onClick="nextPage('page3')">BACK</button><button class="next" onClick="handleFormSubmission()">FINISH</button>
 </div>
   </div>
 
@@ -225,7 +225,7 @@
                     <td class="align-left"></td>
                 </tr>
                 <tr>
-                    <td class="align-right">nutrition</td>
+                    <td class="align-right">meal plan</td>
                     <td class="center-text">|</td>
                     <td class="align-left"></td>
                 </tr>
@@ -247,10 +247,22 @@
     document.getElementById('toggleDarkMode').addEventListener('click', function() {
         document.body.classList.toggle('dark-mode');
     });
+
+    let submitFlag = false;
+
+    window.addEventListener('beforeunload', function(event) {
+        if (submitFlag == false) {
+            // Cancel the event to prevent the browser from navigating away immediately
+            event.preventDefault();
+            // Prompt the user with a warning message
+            event.returnValue = 'Are you sure you want to leave? Your changes may not be saved.'; // Required for some browsers to display the message
+            return 'Are you sure you want to leave? Your changes may not be saved.'; // Required for other browsers to display the message   
+        }
+});
 </script>
 
 </main>
 
 
 {{!-- EMBEDED JAVASCRIPT DOCUMENTS --}}
-
+<script src="js/form.js"></script>

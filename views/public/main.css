@@ -183,13 +183,26 @@ aside {
 .submenu {
   display: none;
   position: absolute;
-  top: 50px; /* Position submenu below main menu */
-  left: 0;
+  top: 60px; /* Position submenu below main menu */
   background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  border-radius: 5px;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
+  /* padding: 10px; */
+  border-radius: 25px;
   transition: all 0.3s ease;
+}
+
+.submenu a {
+  color: var(--almost-black);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0px 24px;
+  margin-right: 10px;
+  height: 50px;
+  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  line-height: 47px;
+  border-radius: 25px;
 }
 
 .submenu.show {
@@ -198,8 +211,8 @@ aside {
 
 .main_nav a:hover,
 a.active {
-  background-color: var(--almost-black);
-  color: white;
+  background-color: white;
+  color: var(--almost-black);
 }
 
 
@@ -765,6 +778,24 @@ object {
       height: 20px;
       line-height: 0;
     }
+
+    .main_nav a:hover,
+    a.active {
+      display: block;
+      height: 20px;
+      line-height: 0;
+}
+
+    .submenu {
+      text-align: left; /* Center the buttons on smaller screens */
+    }
+  
+    .submenu a {
+      display: block; /* Make each button stack vertically */
+      height: 20px;
+      line-height: 0;
+    }
+
 
     header {
         height: 180px;

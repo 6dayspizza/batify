@@ -1,15 +1,15 @@
 <header>
     <nav class="main_nav">
-        <a class="{{#if active.bats}}active{{/if}}" href="/form">FORM</a>
-        <a class="{{#if active.carelogs}}active{{/if}}" href="/faq">FAQ</a>
-        <a class="{{#if active.persons}}active{{/if}}" href="/about" id="about-link">ABOUT</a>
+        <a class="{{#if active.form}}active{{/if}}" href="/form">FORM</a>
+        <a class="{{#if active.faq}}active{{/if}}" href="/faq">FAQ</a>
+        <a class="{{#if active.about}}active{{/if}}" href="/about" id="about-link">ABOUT</a>
         <button id="toggleDarkMode" class="darker">I want it darker.</button>
     </nav>
     <img src="moon.png" alt="Moon" class="moon-img">
 
     <div id="about-submenu" class="submenu">
-        <a class="{{#if active.carelogs}}active{{/if}}" href="/about">background</a>
-        <a class="{{#if active.carelogs}}active{{/if}}" href="/features">features</a>
-        <a class="{{#if active.carelogs}}active{{/if}}" href="/roadmap">roadmap</a>
+        <a class="{{#if active.background}}active{{/if}}" href="/about">background</a>
+        <a class="{{#if active.features}}active{{/if}}" href="/features">features</a>
+        <a class="{{#if active.roadmap}}active{{/if}}" href="/roadmap">roadmap</a>
     </div>
 </header>

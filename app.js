@@ -35,27 +35,42 @@ app.get("/welcome", function(req, res) {
 })
 
 app.get("/form", function(req, res) {
-  res.render("form")
+  res.render("form", {
+    active: { form: true },
+  });
 })
 
 app.get("/faq", function(req, res) {
-  res.render("faq")
+  res.render("faq", {
+    active: { faq: true },
+  });
 })
 
 app.get("/about", function(req, res) {
-  res.render("about")
+  res.render("about", {
+    active: { about: true },
+  });
 })
 
 app.get("/features", function(req, res) {
-  res.render("features")
+  res.render("features", {
+    active: { features: true },
+    active: { about: true},
+  });
 })
 
 app.get("/roadmap", function(req, res) {
-  res.render("roadmap")
+  res.render("roadmap", {
+    active: { roadmap: true },
+    active: { about: true},
+  });
 })
 
 app.get('/stats', (req, res) => {
-  res.render('Stats', { speciesCount: speciesCount });
+  res.render('stats',{
+    speciesCount: speciesCount,
+    active: {stats: true},
+  });
 });
 
 
