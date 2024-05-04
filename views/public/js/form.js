@@ -60,6 +60,10 @@ function nextPage(page) {
     showform(page);
   }
 
+$(document).ready(function() {
+    $('.select2').select2();
+});
+
 function populateSummary() {
     // Get all the input values
     var species = document.getElementById('species').value;

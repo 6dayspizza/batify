@@ -18,3 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+function enterSite() {
+  window.location.href = "/form";
+};
