@@ -79,6 +79,11 @@ a.active {
     transform: rotate(300deg);
 }
 
+.line {
+    border-top: 1px solid #000; /* Change the color and style as needed */
+    margin: 10px 0; /* Adjust the margin as needed */
+}
+
 .about {
   color: var(--dusty-purple)
 }
