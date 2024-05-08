@@ -1,80 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My HTML Page</title>
-    <!-- Link to your CSS file -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <nav class="main_nav">
-            <a href="form.html">FORM</a>
-            <a href="faq.html">FAQ</a>
-            <a href="about.html">ABOUT</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My HTML Page</title>
+        <!-- Link to your CSS file -->
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="main_nav">
+                <a href="form.html">FORM</a>
+                <a href="faq.html">FAQ</a>
+                <a href="about.html">ABOUT</a>
+            </nav>
+            <img src="moon.png" alt="Moon" class="moon-img" />
+        </header>
+
+        <!-- Index Navigation List -->
+        <nav class="index-nav">
+            <ul>
+                <p>care</p>
+                <li>
+                    <a href="#broken-bones"
+                        >what should I do if I detect broken bones?</a
+                    >
+                </li>
+                <li>
+                    <a href="#examine-bat"
+                        >I can't properly examine the bat because it's too
+                        flustered.</a
+                    >
+                </li>
+                <li>
+                    <a href="#sticky-bat"
+                        >that bat looks somewhat (or very) sticky.</a
+                    >
+                </li>
+                <p>taxonomy</p>
+                <li>
+                    <a href="#species">I have no idea what species this is.</a>
+                </li>
+                <li><a href="#sex">I have no idea what sex this is.</a></li>
+                <p>food</p>
+                <li>
+                    <a href="#mealworms"
+                        >there are barely any mealworms left.</a
+                    >
+                </li>
+                <li>
+                    <a href="#worm-awareness"
+                        >I feel a bit bad for the worms...</a
+                    >
+                </li>
+                <li>
+                    <a href="#vegetarian-alternative"
+                        >is there any vegetarian alternative we could feed the
+                        bats?</a
+                    >
+                </li>
+            </ul>
         </nav>
-        <img src="moon.png" alt="Moon" class="moon-img">
-    </header>
+        <div class="space"></div>
 
-    <!-- Index Navigation List -->
-    <nav class="index-nav">
-        <ul><p>care</p>
-            <li><a href="#broken-bones">what should I do if I detect broken bones?</a></li>
-            <li><a href="#examine-bat">I can't properly examine the bat because it's too flustered.</a></li>
-            <li><a href="#sticky-bat">that bat looks somewhat (or very) sticky.</a></li>
-            <p>taxonomy</p>
-            <li><a href="#species">I have no idea what species this is.</a></li>
-            <li><a href="#sex">I have no idea what sex this is.</a></li>
-            <p>food</p>
-            <li><a href="#mealworms">there are barely any mealworms left.</a></li>
-            <li><a href="#worm-awareness">I feel a bit bad for the worms...</a></li>
-            <li><a href="#vegetarian-alternative">is there any vegetarian alternative we could feed the bats?</a></li>
-        </ul>
-    </nav>
-    <div class="space"></div>
+        <!-- FAQ Content -->
+        <p id="broken-bones">what should I do if I detect broken bones?</p>
+        <div class="faq">
+            if there are any broken bones involved, call the vet, no matter what
+            day or time.
+        </div>
+        <div class="space"></div>
 
-    <!-- FAQ Content -->
-    <p id="broken-bones">what should I do if I detect broken bones?</p>
-    <div class="faq">if there are any broken bones involved, call the vet, no matter what day or time.</div>
-    <div class="space"></div>
+        <p id="examine-bat">
+            I can't properly examine the bat because it's too flustered.
+        </p>
+        <div class="faq">
+            store it in one of the boxes with the usual supplies. add some of
+            the buffalo worms, in case it gets hungry. stick a note to the box
+            that you were not able to finish the examination. important: if you
+            can spot some blood and/or broken bones, don't just leave it in the
+            box, but also call the vet.
+        </div>
+        <div class="space"></div>
 
-    <p id="examine-bat">I can't properly examine the bat because it's too flustered.</p>
-    <div class="faq">store it in one of the boxes with the usual supplies. add some of the buffalo worms, in case it gets hungry. stick a note to the box that
-        you were not able to finish the examination. important: if you can spot some blood and/or broken bones, don't just leave it in the box, but also
-        call the vet.
-    </div>
-    <div class="space"></div>
+        <p id="sticky-bat">that bat looks somewhat (or very) sticky.</p>
+        <div class="faq">
+            there is an emergency-cleanup-kit in the cupboard. use the linseed
+            oil to gently rub the stickiness out of its fur. then, use the baby
+            shampoo to remove the oil. repeat process, until bat returns to its
+            usual fluffy self.
+        </div>
+        <div class="space"></div>
 
-    <p id="sticky-bat">that bat looks somewhat (or very) sticky.</p>
-    <div class="faq">there is an emergency-cleanup-kit in the cupboard. use the linseed oil to gently rub the stickiness out of its fur. then, use the baby shampoo to remove the
-        oil. repeat process, until bat returns to its usual fluffy self.
-    </div>
-    <div class="space"></div>
+        <p id="species">I have no idea what species this is.</p>
+        <div class="faq">yeah I'm really bad at that too...</div>
+        <div class="space"></div>
 
-    <p id="species">I have no idea what species this is.</p>
-    <div class="faq">yeah I'm really bad at that too...</div>
-    <div class="space"></div>
+        <p id="sex">I have no idea what sex this is.</p>
+        <div class="faq">
+            just continue the registration without filling that part in.
+            fortunately, for bats it doesn't really matter for the care
+            instructions if it's a boy or a girl. :]
+        </div>
+        <div class="space"></div>
 
-    <p id="sex">I have no idea what sex this is.</p>
-    <div class="faq">just continue the registration without filling that part in. fortunately, for bats it doesn't really matter for the care instructions if it's a boy or a girl. :] </div>
-    <div class="space"></div>
+        <p id="mealworms">there are barely any mealworms left.</p>
+        <div class="faq">
+            there is a conversion table for mealworms to buffalos, and back. you
+            can also consider the automatic conversion rate given when you fill
+            in the form.
+        </div>
+        <div class="space"></div>
 
-    <p id="mealworms">there are barely any mealworms left.</p>
-    <div class="faq">there is a conversion table for mealworms to buffalos, and back. you can also consider the automatic conversion rate given when you fill in the form.
-    </div>
-    <div class="space"></div>
+        <p id="worm-awareness">I feel a bit bad for the worms...</p>
+        <div class="faq">
+            as of yet, we don't know everything about mealworms that is there to
+            know. it is said that they have a "very simple" nervous system. it
+            is believed to be so simple, that you can cut them apart, and the
+            individual parts will still continue to function. that is why we
+            often can still see them move, although they are beheaded. there is
+            no definite answer to whether they perceive pain the same way we do.
+            for this reason, we aim to kill them as quickly as possible. that
+            they have some sort of awareness as to what's about to happen to
+            them, is highly doubtable.
+        </div>
+        <div class="space"></div>
 
-    <p id="worm-awareness">I feel a bit bad for the worms...</p>
-    <div class="faq">as of yet, we don't know everything about mealworms that is there to know. it is said that they have a "very simple" nervous system. it is believed to be so simple,
-        that you can cut them apart, and the individual parts will still continue to function. that is why we often can still see them move, although they are beheaded.
-        there is no definite answer to whether they perceive pain the same way we do. for this reason, we aim to kill them as quickly as possible. that they have some sort of
-        awareness as to what's about to happen to them, is highly doubtable.</div>
-    <div class="space"></div>
-
-    <p id="vegetarian-alternative">is there any vegetarian alternative we could feed the bats?</p>
-    <div class="faq">no, unfortunately there isn't. out there, our local bats have a very exclusive diet. it's insects. they eat between 1500 and 2500 specimens per night. as it is not possible
-        for us to feed them that amount of insects per day in our station, we give them mealworms instead. this diet has proven to be successful.
-    </div>
-</body>
+        <p id="vegetarian-alternative">
+            is there any vegetarian alternative we could feed the bats?
+        </p>
+        <div class="faq">
+            no, unfortunately there isn't. out there, our local bats have a very
+            exclusive diet. it's insects. they eat between 1500 and 2500
+            specimens per night. as it is not possible for us to feed them that
+            amount of insects per day in our station, we give them mealworms
+            instead. this diet has proven to be successful.
+        </div>
+    </body>
 </html>

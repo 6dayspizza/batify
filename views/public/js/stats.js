@@ -4,20 +4,20 @@ var speciesCount = {
     'Pipistrellus kuhlii': 0,
     'Nyctalus noctula': 0,
     'Myotis bechsteinii': 0,
-    'Myotis myotis': 0
-  };
-  
-  function updateSpeciesCount(species) {
+    'Myotis myotis': 0,
+};
+
+function updateSpeciesCount(species) {
     speciesCount[species]++;
-  }
-  
-   document.getElementById('species').addEventListener('change', function() {
+}
+
+document.getElementById('species').addEventListener('change', function () {
     var selectedSpecies = this.value;
     updateSpeciesCount(selectedSpecies);
-  }); 
-  
-  function displaySpeciesCounts() {
+});
+
+function displaySpeciesCounts() {
     for (var species in speciesCount) {
         console.log(species + ': ' + speciesCount[species]);
     }
-  }
+}

@@ -1,72 +1,69 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 /*   ----- Variables  -----  */
 :root {
-  --almost-black: #010107;
-  --dusty-purple: #c2becf;
-  --almost-white: #dddff2;
-  --kinda-berry: #996164;
-  --pale-red: #a86f3a;
-  --nice-green: #659ea6;
-  --greyish: #CFC5C3;
+    --almost-black: #010107;
+    --dusty-purple: #c2becf;
+    --almost-white: #dddff2;
+    --kinda-berry: #996164;
+    --pale-red: #a86f3a;
+    --nice-green: #659ea6;
+    --greyish: #cfc5c3;
 }
 
 /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
 body {
-  /* Can alternatively define in html {} or :root {} */
-  font-family: "Comic Neue", cursive;
-  font-weight: 600;
-  font-size: 110%;
-  font-style: normal;
-  background-color: var(--greyish);
-  margin-top: 90px;
-  padding: 30px;
-  min-height: 400px;
-  margin-bottom: 100px;
-  overflow-x: hidden;
-  clear: both;
+    /* Can alternatively define in html {} or :root {} */
+    font-family: 'Comic Neue', cursive;
+    font-weight: 600;
+    font-size: 110%;
+    font-style: normal;
+    background-color: var(--greyish);
+    margin-top: 90px;
+    padding: 30px;
+    min-height: 400px;
+    margin-bottom: 100px;
+    overflow-x: hidden;
+    clear: both;
 }
 
 /* Dark mode styles */
 body.dark-mode {
-  background-color: var(--almost-black);
-  color: var(--greyish);
+    background-color: var(--almost-black);
+    color: var(--greyish);
 }
 
 body.dark-mode header {
-  background-color: var(--almost-black);
-  color: var(--greyish);
+    background-color: var(--almost-black);
+    color: var(--greyish);
 }
 
 body.dark-mode .background {
-  background-color: var(--greyish);
-  color: var(--almost-black) !important;
+    background-color: var(--greyish);
+    color: var(--almost-black) !important;
 }
 
-
 body.dark-mode .main_nav a {
-  color: var(--greyish);
+    color: var(--greyish);
 }
 
 body.dark-mode .main_nav a:hover,
 a.active {
-  background-color: var(--almost-black);
-  color: var(--almost-black);
+    background-color: var(--almost-black);
+    color: var(--almost-black);
 }
 
 .darker {
-  background-color: white;
-  font-size: 15px;
-  color: var(--almost-black);
-  border: none;
-  cursor: pointer;
-  border-radius: 30px 30px 30px 30px;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 3px 12px;
-  width: 128px;
-
+    background-color: white;
+    font-size: 15px;
+    color: var(--almost-black);
+    border: none;
+    cursor: pointer;
+    border-radius: 30px 30px 30px 30px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 3px 12px;
+    width: 128px;
 }
 
 .moon-img {
@@ -85,123 +82,142 @@ a.active {
 }
 
 .about {
-  color: var(--dusty-purple)
+    color: var(--dusty-purple);
 }
 
 /*  ----- Page layout blocks -----  */
 header,
 footer {
-    font-family: "Comic Neue", cursive;
+    font-family: 'Comic Neue', cursive;
     font-weight: 300;
     font-style: normal;
-  background-color: var(--greyish);
-  color: var(--almost-black);
-  position: fixed;
-  width: 100%;
-  margin: 0%;
-  padding: 1%;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-  z-index: 1;
+    background-color: var(--greyish);
+    color: var(--almost-black);
+    position: fixed;
+    width: 100%;
+    margin: 0%;
+    padding: 1%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 1;
 }
 
 /* Popup container */
 .popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background-color: white;
+    font-size: 15px;
+    color: var(--almost-black);
+    border: none;
+    cursor: pointer;
+    border-radius: 30px 30px 30px 30px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 3px 12px;
+    height: 21px;
+    user-select: none;
 }
 
 /* The actual popup (appears on top) */
 .popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 1%;
-  left: 190%;
-  margin-left: -80px;
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 1%;
+    left: 190%;
+    margin-left: -80px;
 }
 
 /* Popup arrow */
 .popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
 .popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
 }
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 :target::before {
-    content: "";
+    content: '';
     display: block;
     height: 90px; /* Height of the fixed header */
     margin: -90px 0 0; /* Negative margin to offset scroll position */
 }
 
 header {
-  height: 90px;
-  top: 0;
-  padding-left: 2.5%;
-  padding-right: 40px;
+    height: 90px;
+    top: 0;
+    padding-left: 2.5%;
+    padding-right: 40px;
 }
 
 header * {
-  display: inline;
+    display: inline;
 }
 
 .headerimg {
-  height: 90px;
+    height: 90px;
 }
 
 footer {
-  bottom: 0;
-  z-index: 999;
-  align-items: left;
+    bottom: 0;
+    z-index: 999;
+    align-items: left;
 }
 
 main {
-  width: 95%;
+    width: 95%;
 }
 section {
 }
 article {
-  background-color: var(--dusty-purple);
-  margin: 2%;
-  margin-left: 1%;
-  padding: 2%;
-  scroll-margin-top: 90px;
-  border-radius: 30px;
+    background-color: var(--dusty-purple);
+    margin: 2%;
+    margin-left: 1%;
+    padding: 2%;
+    scroll-margin-top: 90px;
+    border-radius: 30px;
 }
 #topic1 {
 }
@@ -214,65 +230,64 @@ aside {
 
 /* Styles for main menu */
 .main_nav {
-  position: relative; /* Ensure submenu position is relative to main menu */
-  text-align: left;
-  font-family: "Comic Neue", cursive;
-  font-weight: 300;
-  font-style: normal;
-  text-decoration: none;
-  flex-grow: 1;
+    position: relative; /* Ensure submenu position is relative to main menu */
+    text-align: left;
+    font-family: 'Comic Neue', cursive;
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+    flex-grow: 1;
 }
 
 .main_nav a {
-  color: var(--almost-black);
-  font-weight: 700;
-  text-decoration: none;
-  padding: 0px 24px;
-  margin-right: 10px;
-  height: 50px;
-  display: inline-block;
-  display: inline-flex;
-  justify-content: center;
-  line-height: 47px;
-  border-radius: 25px;
+    color: var(--almost-black);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0px 24px;
+    margin-right: 10px;
+    height: 50px;
+    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    line-height: 47px;
+    border-radius: 25px;
 }
 
 /* Styles for submenu */
 .submenu {
-  display: none;
-  position: absolute;
-  top: 60px; /* Position submenu below main menu */
-  background-color: #fff;
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
-  /* padding: 10px; */
-  border-radius: 25px;
-  transition: all 0.3s ease;
+    display: none;
+    position: absolute;
+    top: 60px; /* Position submenu below main menu */
+    background-color: #fff;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
+    /* padding: 10px; */
+    border-radius: 25px;
+    transition: all 0.3s ease;
 }
 
 .submenu a {
-  color: var(--almost-black);
-  font-weight: 700;
-  text-decoration: none;
-  padding: 0px 24px;
-  margin-right: 10px;
-  height: 50px;
-  display: inline-block;
-  display: inline-flex;
-  justify-content: center;
-  line-height: 47px;
-  border-radius: 25px;
+    color: var(--almost-black);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0px 24px;
+    margin-right: 10px;
+    height: 50px;
+    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    line-height: 47px;
+    border-radius: 25px;
 }
 
 .submenu.show {
-  display: block;
+    display: block;
 }
 
 .main_nav a:hover,
 a.active {
-  background-color: white;
-  color: var(--almost-black);
+    background-color: white;
+    color: var(--almost-black);
 }
-
 
 .index-nav ul {
     list-style: none; /* Remove default bullet points */
@@ -317,24 +332,24 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Comic Neue", cursive;
+    font-family: 'Comic Neue', cursive;
 }
 h1 {
-  font-size: 500%;
+    font-size: 500%;
 }
 h2 {
-  font-size: 300%;
-  margin: 0;
-  padding: 1%;
-  scroll-margin-top: 110px;
+    font-size: 300%;
+    margin: 0;
+    padding: 1%;
+    scroll-margin-top: 110px;
 }
 h3 {
-  font-size: 125%;
+    font-size: 125%;
 }
 h4 {
-  font-size: 100%;
-  margin: 0;
-  padding: 1%;
+    font-size: 100%;
+    margin: 0;
+    padding: 1%;
 }
 h5 {
 }
@@ -388,8 +403,6 @@ del {
 ins {
 }
 
-
-
 .background {
     background-color: white;
     margin: 0 auto; /* Center the div horizontally */
@@ -397,7 +410,7 @@ ins {
     border-radius: 12px;
     overflow: hidden;
     text-align: left;
-    font-family: "Comic Neue", cursive;
+    font-family: 'Comic Neue', cursive;
     font-weight: 300;
     font-size: 110%;
     font-style: normal;
@@ -407,17 +420,17 @@ ins {
 }
 
 .faq-background {
-  background-color: white;
-  margin: 0 auto; /* Center the div horizontally */
-  color: var(--almost-black);
-  border-radius: 12px;
-  overflow: hidden;
-  text-align: left;
-  font-family: "Comic Neue", cursive;
-  font-weight: 300;
-  font-style: normal;
-  padding: 0.5% 3%;
-  font-weight: 600;
+    background-color: white;
+    margin: 0 auto; /* Center the div horizontally */
+    color: var(--almost-black);
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: left;
+    font-family: 'Comic Neue', cursive;
+    font-weight: 300;
+    font-style: normal;
+    padding: 0.5% 3%;
+    font-weight: 600;
 }
 
 .faq {
@@ -429,13 +442,11 @@ ins {
     color: var(--almost-black);
     border-radius: 12px;
     overflow: hidden;
-    font-family: "Comic Neue", cursive;
+    font-family: 'Comic Neue', cursive;
     font-weight: 300;
     font-style: normal;
     display: none;
 }
-
-
 
 /*  ----- Table ----- */
 
@@ -444,7 +455,8 @@ table {
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     padding: 8px;
 }
 
@@ -479,8 +491,8 @@ td:nth-child(3) {
 }
 
 .flex-container {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 colgroup {
@@ -494,74 +506,74 @@ datalist {
 form {
 }
 fieldset {
-  border-bottom: 0px;
-  border-left: 0px;
-  border-right: 0px;
-  margin-top:;
-  padding:;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    margin-top:;
+    padding:;
 }
 legend {
-  color:;
-  padding-bottom: 10px;
-  font-size:;
+    color:;
+    padding-bottom: 10px;
+    font-size:;
 }
 label {
-  display: block;
-  margin-top: 2%;
+    display: block;
+    margin-top: 2%;
 }
 
 .button-container {
-  display: flex;
-  justify-content: flex-start !important;
+    display: flex;
+    justify-content: flex-start !important;
 }
 
-input[type="integer"] {
-  background-color: #c8c4d3;
-  font-size: 110%;
-  padding: 1%;
-  font-family: inherit;
-  border-radius: 30px;
-  border-color: none;
-  padding: 0 12px;
-  min-height: 38px;
-  border: none;
-  width: 50px;
+input[type='integer'] {
+    background-color: #c8c4d3;
+    font-size: 110%;
+    padding: 1%;
+    font-family: inherit;
+    border-radius: 30px;
+    border-color: none;
+    padding: 0 12px;
+    min-height: 38px;
+    border: none;
+    width: 50px;
 }
 
 input.search {
-  width: 300px;
+    width: 300px;
 }
 
-input[type="text"],
-input[type="number"],
-input[type="date"],
+input[type='text'],
+input[type='number'],
+input[type='date'],
 button,
 textarea,
 select {
     background-color: var(--greyish);
-  font-size: 18px;
-  padding: 1%;
-  font-family: inherit;
-  border-radius: 30px;
-  padding: 0 12px;
-  min-height: 30px;
-  width: 270px;
-  border: none;
+    font-size: 18px;
+    padding: 1%;
+    font-family: inherit;
+    border-radius: 30px;
+    padding: 0 12px;
+    min-height: 30px;
+    width: 270px;
+    border: none;
 }
 textarea {
-  height: 125px;
-  padding-top: 13px;
+    height: 125px;
+    padding-top: 13px;
 }
 
 .nameinput {
-  height: 50px;
-  width: 100%;
+    height: 50px;
+    width: 100%;
 }
 
 #page2,
 #page3,
 #page4 {
-display: none;
+    display: none;
 }
 
 button {
@@ -570,101 +582,101 @@ input {
 }
 
 input:invalid {
-  border: 3px solid red;
+    border: 3px solid red;
 }
 input:valid {
-  /*border:2px solid;*/
+    /*border:2px solid;*/
 }
 
 input::placeholder {
-  color: darkgray;
+    color: darkgray;
 }
-input[type="checkbox"]:checked + label {
-  color: green;
-  font-style: italic;
+input[type='checkbox']:checked + label {
+    color: green;
+    font-style: italic;
 }
 input:disabled {
-  background: repeating-linear-gradient(
-    142deg,
-    #cccccc,
-    #cccccc 4px,
-    #999999 22px
-  );
+    background: repeating-linear-gradient(
+        142deg,
+        #cccccc,
+        #cccccc 4px,
+        #999999 22px
+    );
 }
 input:enabled {
 }
 
 .accent {
-  background-color: var(--almost-black);
-  color: var(--dusty-purple);
-  border: 5px solid var(--dusty-purple);
-  border-radius: 30px 30px 30px 30px;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 3px 12px;
-  width: 60px;
-  font-family: "Comic Neue", cursive;
-  font-weight: 300;
-  font-style: normal;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  pointer-events: none;
+    background-color: var(--almost-black);
+    color: var(--dusty-purple);
+    border: 5px solid var(--dusty-purple);
+    border-radius: 30px 30px 30px 30px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 3px 12px;
+    width: 60px;
+    font-family: 'Comic Neue', cursive;
+    font-weight: 300;
+    font-style: normal;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    pointer-events: none;
 }
 
 .checkbox-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .checkbox-list label {
-  display: block;
-  margin-bottom: 5px;
+    display: block;
+    margin-bottom: 5px;
 }
 
-.checkbox-list input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-  vertical-align: middle;
+.checkbox-list input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
 }
 
 #remark {
-  width: 320px;
-  height: 120px;
+    width: 320px;
+    height: 120px;
 }
 
 .next {
-  background-color: white;
-  font-size: 15px;
-  color: var(--almost-black);
-  border: none;
-  cursor: pointer;
-  border-radius: 30px 30px 30px 30px;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 3px 12px;
-  width: 70px;
-  font-family: "Comic Neue", cursive;
-  font-weight: 600;
-  font-style: normal;
-  display: right;
-  align-items: right;
-  justify-content: right;
-  line-height: 1;
+    background-color: white;
+    font-size: 15px;
+    color: var(--almost-black);
+    border: none;
+    cursor: pointer;
+    border-radius: 30px 30px 30px 30px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 3px 12px;
+    width: 70px;
+    font-family: 'Comic Neue', cursive;
+    font-weight: 600;
+    font-style: normal;
+    display: right;
+    align-items: right;
+    justify-content: right;
+    line-height: 1;
 }
 
 .next:visited {
-  color: var(--dusty-purple) !important;
+    color: var(--dusty-purple) !important;
 }
 
 .next:active {
-  color: var(--almost-black);
-  background-color: var(--dusty-purple);
+    color: var(--almost-black);
+    background-color: var(--dusty-purple);
 }
 .next:hover {
-  background-color: var(--almost-black);
-  color: white;
+    background-color: var(--almost-black);
+    color: white;
 }
 
 .back {
@@ -678,7 +690,7 @@ input:enabled {
     text-decoration: none;
     padding: 3px 12px;
     width: 70px;
-    font-family: "Comic Neue", cursive;
+    font-family: 'Comic Neue', cursive;
     font-weight: 600;
     font-style: normal;
     margin-right: 10px;
@@ -689,32 +701,32 @@ input:enabled {
 }
 
 .space {
-  height: 1rem;
+    height: 1rem;
 }
 
 .actions {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .actions button {
-  margin-left: 13px;
-  width: 120px;
+    margin-left: 13px;
+    width: 120px;
 }
 
 .image {
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .image img {
-  width: 40%;
-  height: auto; /* Maintain the aspect ratio */
+    width: 40%;
+    height: auto; /* Maintain the aspect ratio */
 }
 
 output {
@@ -732,41 +744,41 @@ option {
 textarea {
 }
 :focus {
-  background-color: HoneyDew;
+    background-color: HoneyDew;
 }
 *:required {
-  border: 2px solid green;
+    border: 2px solid green;
 }
 
 /* ----- Media ----- */
 .gallery {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  width: 95%;
-  margin: 1%;
-  padding: 1%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 95%;
+    margin: 1%;
+    padding: 1%;
 }
 
 .gallery figure {
-  border: solid;
-  border-color: var(--almost-white);
-  width: 320px;
-  margin: 1%;
-  padding: 0%;
+    border: solid;
+    border-color: var(--almost-white);
+    width: 320px;
+    margin: 1%;
+    padding: 0%;
 }
 
 .gallery figcaption {
-  color: var(--almost-black);
-  font-weight: bold;
-  display: block;
-  padding: 1% 1% 2% 1%;
+    color: var(--almost-black);
+    font-weight: bold;
+    display: block;
+    padding: 1% 1% 2% 1%;
 }
 
 .gallery img {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 svg {
@@ -828,32 +840,31 @@ object {
 /* Responsive styles for smaller screens */
 @media screen and (max-width: 768px) {
     .main_nav {
-      text-align: left; /* Center the buttons on smaller screens */
+        text-align: left; /* Center the buttons on smaller screens */
     }
-  
+
     .main_nav a {
-      display: block; /* Make each button stack vertically */
-      height: 20px;
-      line-height: 0;
+        display: block; /* Make each button stack vertically */
+        height: 20px;
+        line-height: 0;
     }
 
     .main_nav a:hover,
     a.active {
-      display: block;
-      height: 20px;
-      line-height: 0;
-}
+        display: block;
+        height: 20px;
+        line-height: 0;
+    }
 
     .submenu {
-      text-align: left; /* Center the buttons on smaller screens */
-    }
-  
-    .submenu a {
-      display: block; /* Make each button stack vertically */
-      height: 20px;
-      line-height: 0;
+        text-align: left; /* Center the buttons on smaller screens */
     }
 
+    .submenu a {
+        display: block; /* Make each button stack vertically */
+        height: 20px;
+        line-height: 0;
+    }
 
     header {
         height: 180px;
@@ -861,32 +872,35 @@ object {
 
     body {
         margin-top: 190px;
-      }
-    
-      th, td {
+    }
+
+    th,
+    td {
         display: block;
     }
 
     /* Add spacing between each cell */
-    th, td {
+    th,
+    td {
         margin-bottom: 10px;
     }
 
-    th:nth-child(1), td:nth-child(1) {
+    th:nth-child(1),
+    td:nth-child(1) {
         text-align: left;
     }
 
-    th:nth-child(2), td:nth-child(2) {
+    th:nth-child(2),
+    td:nth-child(2) {
         display: none;
     }
-  }
+}
 
 @keyframes App-logo {
 }
 
 /*   ===== PHONE  media query overrides mobile styles ===== */
 @media screen and (max-width: 768px) {
-
 }
 
 /*   ===== TABLET  media query overrides mobile styles ===== */

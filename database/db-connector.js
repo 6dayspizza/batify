@@ -18,18 +18,17 @@ var pool = mysql.createPool({
 module.exports.pool = pool;
 */
 
-
 var mysql = require('mysql');
 
 // Create a 'connection pool' using the default credentials
 var pool = mysql.createPool({
-     connectionLimit: 10,
-     host: 'localhost',  // Default host for local installations
-     user: 'root',       // Default user for local installations
-    password: '',       // Default password is often empty for local installations
-    database: 'CS_361',    // Default test database
-    dateStrings: 'date'
- });
+    connectionLimit: 10,
+    host: 'localhost', // Default host for local installations
+    user: 'root', // Default user for local installations
+    password: '', // Default password is often empty for local installations
+    database: 'CS_361', // Default test database
+    dateStrings: 'date',
+});
 
 // Export it for use in our application
 module.exports.pool = pool;
