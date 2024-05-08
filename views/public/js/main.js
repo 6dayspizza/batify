@@ -21,3 +21,31 @@ document.addEventListener('DOMContentLoaded', function() {
 function enterSite() {
   window.location.href = "/form";
 };
+
+function quotePopup() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const quoteAuthorElement = document.getElementById('quoteAuthor');
+
+  // Function to fetch data from the microservice
+  function fetchData() {
+      axios.get('https://arcane-hollows-29475-7828051692ff.herokuapp.com/random-quote-golf')
+          .then(response => {
+              const { quote, author } = response.data;
+              // Update header content with quote and author
+              quoteAuthorElement.innerHTML = `<p>Quote: ${quote}</p><p>Author: ${author}</p>`;
+          })
+          .catch(error => {
+              console.error('Error fetching data from microservice:', error);
+          });
+  }
+
+  // Fetch data initially when the page loads
+  fetchData();
+
+  // Optionally, fetch data periodically
+  setInterval(fetchData, 60000); // Fetch data every minute (adjust as needed)
+});

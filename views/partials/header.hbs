@@ -4,6 +4,9 @@
         <a class="{{#if active.faq}}active{{/if}}" href="/faq">FAQ</a>
         <a class="{{#if active.about}}active{{/if}}" href="/about" id="about-link">ABOUT</a>
         <button id="toggleDarkMode" class="darker">I want it darker.</button>
+        <div class="popup" onclick="quotePopup()">Click me!
+  <div id="quoteAuthor"><span class="popuptext" id="myPopup">"{{data.quote}}" ({{data.author}})</span></div>
+
     </nav>
     <img src="moon.png" alt="Moon" class="moon-img">
 
@@ -12,4 +15,7 @@
         <a class="{{#if active.features}}active{{/if}}" href="/features">features</a>
         <a class="{{#if active.roadmap}}active{{/if}}" href="/roadmap">roadmap</a>
     </div>
+</div>
 </header>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
