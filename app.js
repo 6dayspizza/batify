@@ -9,6 +9,10 @@ const db = require('./database/db-connector');
 const parse = require('csv-parse');
 const { getIcon } = require('simple-icons');
 const cors = require('cors');
+const corsOptions = {
+    origin: 'https://arcane-hollows-29475-7828051692ff.herokuapp.com',//(https://your-client-app.com)
+    optionsSuccessStatus: 200,
+  };
 
 /*
     SETUP
@@ -26,12 +30,9 @@ const hbs = exphbs.create({
 });
 app.engine('.hbs', hbs.engine);
 app.set('view engine', '.hbs');
-app.use(cors())
+app.use(cors(corsOptions));
 
 
-app.get('/products/:id', function (req, res, next) {
-    res.json({msg: 'This is CORS-enabled for all origins!'})
-  })
 
 /*
     ALL GET REQUESTS TO DISPLAY DATA
