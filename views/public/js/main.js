@@ -42,6 +42,6 @@ async function showQuote() {
 
     // Update header content with quote and author
     const quoteAuthor = document.getElementById('quoteAuthor');
-    quoteAuthor.innerHTML = `<p>Quote: ${quote}</p><p>Author: ${author}</p>`;
+    quoteAuthor.innerHTML = `<p>"${quote}"</p><p> (${author})</p>`;
     quoteAuthor.classList.toggle('show');
 }

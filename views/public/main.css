@@ -66,6 +66,10 @@ a.active {
     width: 128px;
 }
 
+.toggle-icon {
+    cursor: pointer;
+}
+
 .moon-img {
     position: absolute;
     top: -60px;
@@ -127,29 +131,29 @@ footer {
 /* The actual popup (appears on top) */
 .popup .popuptext {
     visibility: hidden;
-    width: 160px;
+    width: 250px;
     background-color: #555;
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 8px 0;
+    padding: 8px 8px;
     position: absolute;
     z-index: 1;
-    bottom: 1%;
-    left: 190%;
+    top: 1%;
+    left: 230%;
     margin-left: -80px;
 }
 
 /* Popup arrow */
 .popup .popuptext::after {
+    left: -15px;
+    top: 5px;
+    border-top: 6px solid transparent;
+    border-right: 15px solid #555;
+    border-left: none;
+    border-bottom: 15px solid transparent;
     content: '';
     position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
@@ -557,7 +561,6 @@ select {
     border-radius: 30px;
     padding: 0 12px;
     min-height: 30px;
-    width: 270px;
     border: none;
 }
 textarea {
@@ -854,16 +857,31 @@ object {
         display: block;
         height: 20px;
         line-height: 0;
+        background-color: transparent;
+        color: var(--almost-black);
     }
 
     .submenu {
         text-align: left; /* Center the buttons on smaller screens */
+        background-color: transparent;
     }
 
     .submenu a {
         display: block; /* Make each button stack vertically */
         height: 20px;
         line-height: 0;
+        margin-left: 150px;
+        background-color: transparent;
+    }
+
+    .moon-img {
+        position: absolute;
+        top: -60px;
+        right: -20px;
+        width: 200px; /* Adjust width as needed */
+        height: auto; /* Maintain aspect ratio */
+        z-index: 2; /* Ensure the moon image has a higher z-index than the header */
+        transform: rotate(300deg);
     }
 
     header {

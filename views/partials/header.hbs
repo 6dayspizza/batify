@@ -4,11 +4,11 @@
         <a class="{{#if active.faq}}active{{/if}}" href="/faq">FAQ</a>
         <a class="{{#if active.about}}active{{/if}}" href="/about" id="about-link">ABOUT</a>
         <button id="toggleDarkMode" class="darker">I want it darker.</button>
-        <div id="popupTrigger" class="popup" onclick="showQuote()">click me!
+        <button id="popupTrigger" class="popup" onclick="showQuote()">click me!
             <div id="myPopup">
                 <span id="quoteAuthor" class="popuptext">"{{data.quote}}" ({{data.author}})</span>
             </div>
-        </div>
+        </button>
     </nav>
     <img src="moon.png" alt="Moon" class="moon-img">
 
