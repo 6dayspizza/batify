@@ -912,6 +912,31 @@ object {
     td:nth-child(2) {
         display: none;
     }
+
+        /* The actual popup (appears on top) */
+    .popup .popuptext {
+        width: 150px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 8px;
+        position: absolute;
+        z-index: 1;
+        top: 140%;
+        left: 10%;
+        margin-left: -80px;
+    }
+
+    /* Popup arrow */
+    .popup .popuptext::after {
+        left: 100px;
+        top: -10px;
+        border-top: none;
+        border-right: 15px solid transparent;
+        border-left: 15px solid transparent;
+        border-bottom: 15px solid #555;
+    }
 }
 
 @keyframes App-logo {
