@@ -8,6 +8,7 @@ const exphbs = require('express-handlebars');
 const db = require('./database/db-connector');
 const parse = require('csv-parse');
 const { getIcon } = require('simple-icons');
+const cors = require('cors');
 
 /*
     SETUP
@@ -25,6 +26,16 @@ const hbs = exphbs.create({
 });
 app.engine('.hbs', hbs.engine);
 app.set('view engine', '.hbs');
+app.use(cors())
+
+
+app.get('/products/:id', function (req, res, next) {
+    res.json({msg: 'This is CORS-enabled for all origins!'})
+  })
+  
+  app.listen(80, function () {
+    console.log('CORS-enabled web server listening on port 80')
+  })
 
 /*
     ALL GET REQUESTS TO DISPLAY DATA
