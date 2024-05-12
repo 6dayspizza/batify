@@ -839,14 +839,14 @@ textarea {
         padding: 8px 8px;
         position: absolute;
         z-index: 1;
-        top: 140%;
-        left: 10%;
+        top: 150%;
+        left: 30%;
         margin-left: -80px;
     }
 
     /* Popup arrow */
     .popup .popuptext::after {
-        left: 100px;
+        left: 80px;
         top: -10px;
         border-top: none;
         border-right: 15px solid transparent;
