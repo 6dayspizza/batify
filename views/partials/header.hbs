@@ -14,7 +14,7 @@
             <button id="popupTrigger" class="popup" onclick="showQuote()">
                 <img src="/icons/message-circle.svg"></img>
                 <div id="myPopup">
-                    <span id="quoteAuthor" class="popuptext">"{{data.quote}}" ({{data.author}})</span>
+                    <span id="quoteAuthor" class="popuptext">"{{data.quote}}" - ({{data.author}})</span>
                 </div>
             </button>
           <span class="tooltiptext">click for random quote about bats.</span>
@@ -23,9 +23,9 @@
     <img src="moon.png" alt="Moon" class="moon-img">
 
     <div id="about-submenu" class="submenu">
-        <a class="{{#if active.background}}active{{/if}}" href="/about">background</a>
-        <a class="{{#if active.features}}active{{/if}}" href="/features">features</a>
-        <a class="{{#if active.roadmap}}active{{/if}}" href="/roadmap">roadmap</a>
+        <a class="{{#if active.background}}active{{/if}}" href="/about">.background</a>
+        <a class="{{#if active.features}}active{{/if}}" href="/features">.features</a>
+        <a class="{{#if active.roadmap}}active{{/if}}" href="/roadmap">.roadmap</a>
     </div>
 </header>
 

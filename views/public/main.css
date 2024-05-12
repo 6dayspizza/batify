@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Belgrano&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Belgrano&family=Chelsea+Market&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teachers:wght@400..800&display=swap');
+
 /*   ----- Variables  -----  */
 :root {
     --almost-black: #010107;
@@ -15,8 +17,7 @@
 /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
 body {
     /* Can alternatively define in html {} or :root {} */
-    /*font-family: 'Comic Neue', cursive;*/
-    font-family: "Belgrano", serif;
+    font-family: "Teachers", sans-serif;
     font-weight: 400;
     font-size: 110%;
     font-style: normal;
@@ -93,7 +94,7 @@ a.active {
 /*  ----- Page layout blocks -----  */
 header,
 footer {
-    font-family: "Belgrano", serif;
+    font-family: "Teachers", sans-serif;
     font-weight: 300;
     font-style: normal;
     background-color: var(--greyish);
@@ -180,7 +181,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 5px 0;
-    font-family: "Belgrano", serif;
+    font-family: "Teachers", sans-serif;
     font-weight: 300;
     font-size: 15px;
     font-style: normal;
@@ -300,7 +301,7 @@ aside {
     position: absolute;
     font-family: "Chelsea Market", system-ui;
     top: 60px; /* Position submenu below main menu */
-    background-color: #fff;
+    /* background-color: #fff;*/
     /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
     /* padding: 10px; */
     border-radius: 25px;
@@ -374,7 +375,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Belgrano", serif;
+    font-family: "Teachers", sans-serif;
 }
 h1 {
     font-size: 500%;
@@ -386,7 +387,9 @@ h2 {
     scroll-margin-top: 110px;
 }
 h3 {
-    font-size: 125%;
+    font-family: "Chelsea Market", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 h4 {
     font-size: 100%;
@@ -405,7 +408,7 @@ h6 {
     border-radius: 12px;
     overflow: hidden;
     text-align: left;
-    font-family: "Belgrano", serif;
+    font-family: "Teachers", sans-serif;
     font-weight: 300;
     font-size: 110%;
     font-style: normal;
@@ -421,7 +424,7 @@ h6 {
     border-radius: 12px;
     overflow: hidden;
     text-align: left;
-    font-family: "Belgrano", serif;
+    font-family: "Teachers", sans-serif;
     font-weight: 300;
     font-style: normal;
     padding: 0.5% 3%;
@@ -437,7 +440,7 @@ h6 {
     color: var(--almost-black);
     border-radius: 12px;
     overflow: hidden;
-    font-family: "Belgrano", serif;
+    font-family: "Teachers", sans-serif;
     font-weight: 300;
     font-style: normal;
     display: none;
@@ -609,7 +612,7 @@ input:enabled {
     text-decoration: none;
     padding: 3px 12px;
     width: 60px;
-    font-family: "Belgrano", serif;
+    font-family: "Teachers", sans-serif;
     font-weight: 300;
     font-style: normal;
     align-items: center;
@@ -651,8 +654,8 @@ input:enabled {
     text-decoration: none;
     padding: 3px 12px;
     width: 70px;
-    font-family: "Belgrano", serif;
-    font-weight: 300;
+    font-family: "Chelsea Market", system-ui;
+    font-weight: 400;
     font-style: normal;
     display: right;
     align-items: right;
@@ -684,8 +687,8 @@ input:enabled {
     text-decoration: none;
     padding: 3px 12px;
     width: 70px;
-    font-family: "Belgrano", serif;
-    font-weight: 300;
+    font-family: "Chelsea Market", system-ui;
+    font-weight: 400;
     font-style: normal;
     margin-right: 10px;
     display: center;
@@ -786,7 +789,7 @@ textarea {
         display: block; /* Make each button stack vertically */
         height: 20px;
         line-height: 0;
-        margin-left: 150px;
+        margin-left: 100px;
         background-color: transparent;
     }
 
