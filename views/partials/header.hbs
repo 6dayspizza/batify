@@ -1,14 +1,24 @@
-<header>
+<!-- header.hbs -->
+<header id="myHeader" class="collapsed">
     <nav class="main_nav">
         <a class="{{#if active.form}}active{{/if}}" href="/form">FORM</a>
         <a class="{{#if active.faq}}active{{/if}}" href="/faq">FAQ</a>
         <a class="{{#if active.about}}active{{/if}}" href="/about" id="about-link">ABOUT</a>
-        <button id="toggleDarkMode" class="darker">I want it darker.</button>
-        <button id="popupTrigger" class="popup" onclick="showQuote()">click me!
-            <div id="myPopup">
-                <span id="quoteAuthor" class="popuptext">"{{data.quote}}" ({{data.author}})</span>
-            </div>
+        <div class="tooltip">
+        <button id="toggleDarkMode" class="darker">
+            <img src="/icons/moon.svg"></img>
         </button>
+                  <span class="tooltiptext">I want it darker.</span>
+        </div>
+        <div class="tooltip">
+            <button id="popupTrigger" class="popup" onclick="showQuote()">
+                <img src="/icons/message-circle.svg"></img>
+                <div id="myPopup">
+                    <span id="quoteAuthor" class="popuptext">"{{data.quote}}" ({{data.author}})</span>
+                </div>
+            </button>
+          <span class="tooltiptext">click for random quote about bats.</span>
+          </div>
     </nav>
     <img src="moon.png" alt="Moon" class="moon-img">
 
@@ -17,7 +27,6 @@
         <a class="{{#if active.features}}active{{/if}}" href="/features">features</a>
         <a class="{{#if active.roadmap}}active{{/if}}" href="/roadmap">roadmap</a>
     </div>
-</div>
 </header>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Belgrano&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belgrano&family=Chelsea+Market&display=swap');
 /*   ----- Variables  -----  */
 :root {
     --almost-black: #010107;
@@ -14,8 +15,9 @@
 /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
 body {
     /* Can alternatively define in html {} or :root {} */
-    font-family: 'Comic Neue', cursive;
-    font-weight: 600;
+    /*font-family: 'Comic Neue', cursive;*/
+    font-family: "Belgrano", serif;
+    font-weight: 400;
     font-size: 110%;
     font-style: normal;
     background-color: var(--greyish);
@@ -63,7 +65,6 @@ a.active {
     font-weight: bold;
     text-decoration: none;
     padding: 3px 12px;
-    width: 128px;
 }
 
 .toggle-icon {
@@ -92,7 +93,7 @@ a.active {
 /*  ----- Page layout blocks -----  */
 header,
 footer {
-    font-family: 'Comic Neue', cursive;
+    font-family: "Belgrano", serif;
     font-weight: 300;
     font-style: normal;
     background-color: var(--greyish);
@@ -108,6 +109,10 @@ footer {
     align-items: center;
     box-sizing: border-box;
     z-index: 1;
+}
+
+#myHeader {
+    background-image: linear-gradient(to bottom, var(--dusty-purple),rgba(255,0,0,0));
 }
 
 /* Popup container */
@@ -140,7 +145,7 @@ footer {
     position: absolute;
     z-index: 1;
     top: 1%;
-    left: 230%;
+    left: 320%;
     margin-left: -80px;
 }
 
@@ -162,6 +167,32 @@ footer {
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
 }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    font-family: "Belgrano", serif;
+    font-weight: 300;
+    font-size: 15px;
+    font-style: normal;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
@@ -236,16 +267,22 @@ aside {
 .main_nav {
     position: relative; /* Ensure submenu position is relative to main menu */
     text-align: left;
-    font-family: 'Comic Neue', cursive;
-    font-weight: 300;
+    font-family: "Chelsea Market", system-ui;
+    font-weight: 400;
     font-style: normal;
     text-decoration: none;
     flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.main_nav > * {
+    margin-right: 10px;
 }
 
 .main_nav a {
     color: var(--almost-black);
-    font-weight: 700;
+    font-weight: 300;
     text-decoration: none;
     padding: 0px 24px;
     margin-right: 10px;
@@ -261,6 +298,7 @@ aside {
 .submenu {
     display: none;
     position: absolute;
+    font-family: "Chelsea Market", system-ui;
     top: 60px; /* Position submenu below main menu */
     background-color: #fff;
     /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
@@ -271,7 +309,7 @@ aside {
 
 .submenu a {
     color: var(--almost-black);
-    font-weight: 700;
+    font-weight: 400;
     text-decoration: none;
     padding: 0px 24px;
     margin-right: 10px;
@@ -315,7 +353,7 @@ a.active {
 
 /*  -----  Typography  ----- */
 p {
-    font-weight: 600;
+    font-weight: 300;
 }
 br {
 }
@@ -336,7 +374,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Comic Neue', cursive;
+    font-family: "Belgrano", serif;
 }
 h1 {
     font-size: 500%;
@@ -360,53 +398,6 @@ h5 {
 h6 {
 }
 
-abbr {
-}
-acronym {
-}
-address {
-}
-blockquote {
-}
-q {
-}
-cite {
-}
-em {
-}
-hr {
-}
-mark {
-}
-s {
-}
-span {
-}
-strong {
-}
-sub {
-}
-sup {
-}
-time {
-}
-
-/*  ----- Coding or instructional typography ----- */
-pre {
-}
-code {
-}
-kbd {
-}
-samp {
-}
-var {
-}
-del {
-}
-ins {
-}
-
 .background {
     background-color: white;
     margin: 0 auto; /* Center the div horizontally */
@@ -414,7 +405,7 @@ ins {
     border-radius: 12px;
     overflow: hidden;
     text-align: left;
-    font-family: 'Comic Neue', cursive;
+    font-family: "Belgrano", serif;
     font-weight: 300;
     font-size: 110%;
     font-style: normal;
@@ -430,7 +421,7 @@ ins {
     border-radius: 12px;
     overflow: hidden;
     text-align: left;
-    font-family: 'Comic Neue', cursive;
+    font-family: "Belgrano", serif;
     font-weight: 300;
     font-style: normal;
     padding: 0.5% 3%;
@@ -446,7 +437,7 @@ ins {
     color: var(--almost-black);
     border-radius: 12px;
     overflow: hidden;
-    font-family: 'Comic Neue', cursive;
+    font-family: "Belgrano", serif;
     font-weight: 300;
     font-style: normal;
     display: none;
@@ -618,7 +609,7 @@ input:enabled {
     text-decoration: none;
     padding: 3px 12px;
     width: 60px;
-    font-family: 'Comic Neue', cursive;
+    font-family: "Belgrano", serif;
     font-weight: 300;
     font-style: normal;
     align-items: center;
@@ -660,8 +651,8 @@ input:enabled {
     text-decoration: none;
     padding: 3px 12px;
     width: 70px;
-    font-family: 'Comic Neue', cursive;
-    font-weight: 600;
+    font-family: "Belgrano", serif;
+    font-weight: 300;
     font-style: normal;
     display: right;
     align-items: right;
@@ -693,8 +684,8 @@ input:enabled {
     text-decoration: none;
     padding: 3px 12px;
     width: 70px;
-    font-family: 'Comic Neue', cursive;
-    font-weight: 600;
+    font-family: "Belgrano", serif;
+    font-weight: 300;
     font-style: normal;
     margin-right: 10px;
     display: center;
@@ -763,87 +754,12 @@ textarea {
     padding: 1%;
 }
 
-.gallery figure {
-    border: solid;
-    border-color: var(--almost-white);
-    width: 320px;
-    margin: 1%;
-    padding: 0%;
-}
-
-.gallery figcaption {
-    color: var(--almost-black);
-    font-weight: bold;
-    display: block;
-    padding: 1% 1% 2% 1%;
-}
-
-.gallery img {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-svg {
-}
-picture {
-}
-source {
-}
-iframe {
-}
-video {
-}
-audio {
-}
-embed {
-}
-object {
-}
-
-/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
-
-.floatright {
-}
-.floatleft {
-}
-.center-middle {
-}
-
-.ten {
-}
-.twenty {
-}
-.thirty {
-}
-.forty {
-}
-.fifty {
-}
-.sixty {
-}
-.seventy {
-}
-.eighty {
-}
-
-.radius {
-}
-.circle {
-}
-.boxshadow {
-}
-.tshadow {
-}
-.gradient {
-}
-.shape {
-}
 
 /* Responsive styles for smaller screens */
 @media screen and (max-width: 768px) {
     .main_nav {
         text-align: left; /* Center the buttons on smaller screens */
+        display: block;
     }
 
     .main_nav a {
