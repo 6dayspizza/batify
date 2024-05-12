@@ -17,7 +17,7 @@
 /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
 body {
     /* Can alternatively define in html {} or :root {} */
-    font-family: "Teachers", sans-serif;
+    font-family: 'Teachers', sans-serif;
     font-weight: 400;
     font-size: 110%;
     font-style: normal;
@@ -94,7 +94,7 @@ a.active {
 /*  ----- Page layout blocks -----  */
 header,
 footer {
-    font-family: "Teachers", sans-serif;
+    font-family: 'Teachers', sans-serif;
     font-weight: 300;
     font-style: normal;
     background-color: var(--greyish);
@@ -113,7 +113,11 @@ footer {
 }
 
 #myHeader {
-    background-image: linear-gradient(to bottom, var(--dusty-purple),rgba(255,0,0,0));
+    background-image: linear-gradient(
+        to bottom,
+        var(--dusty-purple),
+        rgba(255, 0, 0, 0)
+    );
 }
 
 /* Popup container */
@@ -172,28 +176,28 @@ footer {
 .tooltip {
     position: relative;
     display: inline-block;
-  }
-  
-  .tooltip .tooltiptext {
+}
+
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
     background-color: #555;
     color: #fff;
     text-align: center;
     padding: 5px 0;
-    font-family: "Teachers", sans-serif;
+    font-family: 'Teachers', sans-serif;
     font-weight: 300;
     font-size: 15px;
     font-style: normal;
-  
+
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
-  }
-  
-  .tooltip:hover .tooltiptext {
+}
+
+.tooltip:hover .tooltiptext {
     visibility: visible;
-  }
+}
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
@@ -268,7 +272,7 @@ aside {
 .main_nav {
     position: relative; /* Ensure submenu position is relative to main menu */
     text-align: left;
-    font-family: "Chelsea Market", system-ui;
+    font-family: 'Chelsea Market', system-ui;
     font-weight: 400;
     font-style: normal;
     text-decoration: none;
@@ -299,7 +303,7 @@ aside {
 .submenu {
     display: none;
     position: absolute;
-    font-family: "Chelsea Market", system-ui;
+    font-family: 'Chelsea Market', system-ui;
     top: 60px; /* Position submenu below main menu */
     /* background-color: #fff;*/
     /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
@@ -375,7 +379,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Teachers", sans-serif;
+    font-family: 'Teachers', sans-serif;
 }
 h1 {
     font-size: 500%;
@@ -387,7 +391,7 @@ h2 {
     scroll-margin-top: 110px;
 }
 h3 {
-    font-family: "Chelsea Market", system-ui;
+    font-family: 'Chelsea Market', system-ui;
     font-weight: 400;
     font-style: normal;
 }
@@ -408,7 +412,7 @@ h6 {
     border-radius: 12px;
     overflow: hidden;
     text-align: left;
-    font-family: "Teachers", sans-serif;
+    font-family: 'Teachers', sans-serif;
     font-weight: 300;
     font-size: 110%;
     font-style: normal;
@@ -424,7 +428,7 @@ h6 {
     border-radius: 12px;
     overflow: hidden;
     text-align: left;
-    font-family: "Teachers", sans-serif;
+    font-family: 'Teachers', sans-serif;
     font-weight: 300;
     font-style: normal;
     padding: 0.5% 3%;
@@ -440,7 +444,7 @@ h6 {
     color: var(--almost-black);
     border-radius: 12px;
     overflow: hidden;
-    font-family: "Teachers", sans-serif;
+    font-family: 'Teachers', sans-serif;
     font-weight: 300;
     font-style: normal;
     display: none;
@@ -612,7 +616,7 @@ input:enabled {
     text-decoration: none;
     padding: 3px 12px;
     width: 60px;
-    font-family: "Teachers", sans-serif;
+    font-family: 'Teachers', sans-serif;
     font-weight: 300;
     font-style: normal;
     align-items: center;
@@ -654,7 +658,7 @@ input:enabled {
     text-decoration: none;
     padding: 3px 12px;
     width: 70px;
-    font-family: "Chelsea Market", system-ui;
+    font-family: 'Chelsea Market', system-ui;
     font-weight: 400;
     font-style: normal;
     display: right;
@@ -687,7 +691,7 @@ input:enabled {
     text-decoration: none;
     padding: 3px 12px;
     width: 70px;
-    font-family: "Chelsea Market", system-ui;
+    font-family: 'Chelsea Market', system-ui;
     font-weight: 400;
     font-style: normal;
     margin-right: 10px;
@@ -756,7 +760,6 @@ textarea {
     margin: 1%;
     padding: 1%;
 }
-
 
 /* Responsive styles for smaller screens */
 @media screen and (max-width: 768px) {
@@ -832,7 +835,7 @@ textarea {
         display: none;
     }
 
-        /* The actual popup (appears on top) */
+    /* The actual popup (appears on top) */
     .popup .popuptext {
         width: 150px;
         background-color: #555;

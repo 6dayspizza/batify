@@ -10,9 +10,9 @@ const parse = require('csv-parse');
 const { getIcon } = require('simple-icons');
 const cors = require('cors');
 const corsOptions = {
-    origin: 'https://arcane-hollows-29475-7828051692ff.herokuapp.com',//(https://your-client-app.com)
+    origin: 'https://arcane-hollows-29475-7828051692ff.herokuapp.com', //(https://your-client-app.com)
     optionsSuccessStatus: 200,
-  };
+};
 
 /*
     SETUP
@@ -32,8 +32,6 @@ app.engine('.hbs', hbs.engine);
 app.set('view engine', '.hbs');
 app.use(cors(corsOptions));
 
-
-
 /*
     ALL GET REQUESTS TO DISPLAY DATA
 */
@@ -46,7 +44,9 @@ app.get('/welcome', (req, res, next) => {
     // Fetch data from microservice
     // https://arcane-hollows-29475-7828051692ff.herokuapp.com/random-quote-golf
     axios
-        .get('https://arcane-hollows-29475-7828051692ff.herokuapp.com/random-quote-golf')
+        .get(
+            'https://arcane-hollows-29475-7828051692ff.herokuapp.com/random-quote-golf'
+        )
         .then((response) => {
             // Render welcome page with fetched data
             res.render('welcome', { data: response.data });
