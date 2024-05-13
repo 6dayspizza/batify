@@ -45,7 +45,7 @@ app.get('/welcome', (req, res, next) => {
     // https://arcane-hollows-29475-7828051692ff.herokuapp.com/random-quote-golf
     axios
         .get(
-            'https://arcane-hollows-29475-7828051692ff.herokuapp.com/random-quote-golf'
+            'https://arcane-hollows-29475-7828051692ff.herokuapp.com/random-quote-bats'
         )
         .then((response) => {
             // Render welcome page with fetched data
