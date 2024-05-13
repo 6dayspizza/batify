@@ -8,7 +8,7 @@
     --almost-black: #010107;
     --dusty-purple: #c2becf;
     --almost-white: #dddff2;
-    --kinda-berry: #996164;
+    --kinda-berry: #a6a0b9;
     --pale-red: #a86f3a;
     --nice-green: #659ea6;
     --greyish: #cfc5c3;
@@ -115,7 +115,7 @@ footer {
 #myHeader {
     background-image: linear-gradient(
         to bottom,
-        var(--dusty-purple),
+        var(--kinda-berry),
         rgba(255, 0, 0, 0)
     );
 }
