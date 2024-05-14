@@ -101,7 +101,7 @@ app.get('/stats', (req, res) => {
 
 /*
     MICROSERVICE A
-
+    */
 // https://arcane-hollows-29475-7828051692ff.herokuapp.com/
 axios
     .get('https://arcane-hollows-29475-7828051692ff.herokuapp.com/')
@@ -111,7 +111,7 @@ axios
     .catch((error) => {
         console.error('Error fetching data from microservice:', error);
     });
-    */
+
 
 /*
     FANCY EXTRAS
