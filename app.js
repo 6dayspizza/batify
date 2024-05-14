@@ -41,7 +41,7 @@ app.get('/', (req, res, next) => {
 });
 
 app.get('/welcome', function(req, res) {
-  res.render("'welcome')
+  res.render('welcome')
 });
 
 /*
