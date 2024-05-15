@@ -40,12 +40,18 @@ app.get('/', (req, res, next) => {
     res.redirect(307, '/welcome');
 });
 
+app.get('/welcome', function(req, res) {
+  res.render('welcome')
+});
+
+/*
 app.get('/welcome', (req, res, next) => {
+    res.render('welcome'),
     // Fetch data from microservice
     // https://arcane-hollows-29475-7828051692ff.herokuapp.com/random-quote-golf
     axios
         .get(
-            'https://arcane-hollows-29475-7828051692ff.herokuapp.com/random-quote-golf'
+            'https://arcane-hollows-29475-7828051692ff.herokuapp.com/random-quote-bats'
         )
         .then((response) => {
             // Render welcome page with fetched data
@@ -57,7 +63,7 @@ app.get('/welcome', (req, res, next) => {
             // If error occurs, render welcome page without data
             res.render('welcome');
         });
-});
+});*/
 
 app.get('/form', function (req, res) {
     res.render('form', {
@@ -100,7 +106,7 @@ app.get('/stats', (req, res) => {
 
 /*
     MICROSERVICE A
-*/
+
 // https://arcane-hollows-29475-7828051692ff.herokuapp.com/
 axios
     .get('https://arcane-hollows-29475-7828051692ff.herokuapp.com/')
@@ -110,6 +116,7 @@ axios
     .catch((error) => {
         console.error('Error fetching data from microservice:', error);
     });
+*/
 
 /*
     FANCY EXTRAS

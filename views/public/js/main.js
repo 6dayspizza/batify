@@ -27,7 +27,7 @@ async function fetchData() {
     try {
         // https://arcane-hollows-29475-7828051692ff.herokuapp.com/random-quote-golf
         const response = await axios.get(
-            'https://arcane-hollows-29475-7828051692ff.herokuapp.com/random-quote-golf'
+            'https://arcane-hollows-29475-7828051692ff.herokuapp.com/random-quote-bats'
         );
         return response.data;
     } catch (error) {
@@ -38,10 +38,10 @@ async function fetchData() {
 async function showQuote() {
     // Fetch data initially when the page loads
     const data = await fetchData();
-    const { quote, author } = data;
+    const { fact } = data;
 
     // Update header content with quote and author
     const quoteAuthor = document.getElementById('quoteAuthor');
-    quoteAuthor.innerHTML = `<p>"${quote}"</p><p> (${author})</p>`;
+    quoteAuthor.innerHTML = `<p>${fact}</p></p>`;
     quoteAuthor.classList.toggle('show');
 }
