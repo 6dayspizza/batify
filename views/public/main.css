@@ -647,6 +647,11 @@ input:enabled {
     height: 120px;
 }
 
+.confirm {
+    cursor: pointer;
+    background-color: var(--nice-green);
+}
+
 .next {
     background-color: white;
     font-size: 15px;
