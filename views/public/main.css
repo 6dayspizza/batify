@@ -203,6 +203,13 @@ footer {
     width: 90%;
     margin: auto;
 }
+
+.container img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
 #first {
     width: 30%;
     float: left;
