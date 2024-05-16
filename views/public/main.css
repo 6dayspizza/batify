@@ -477,7 +477,9 @@ td {
 /* Set fixed width for Column 1 */
 th:nth-child(1),
 td:nth-child(1) {
-    width: 200px; /* Adjust as needed */
+    width: 200px;
+    font-weight: 600;
+    
 }
 
 /* Set fixed width for Column 1.5 */
@@ -833,6 +835,7 @@ textarea {
     th:nth-child(1),
     td:nth-child(1) {
         text-align: left;
+        margin-bottom: 0.1;
     }
 
     th:nth-child(2),
