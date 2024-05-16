@@ -204,8 +204,8 @@ footer {
     margin: auto;
 }
 
-.container img {
-  max-width: 100%;
+#container img {
+  max-width: 90%;
   max-height: 100%;
   display: block;
 }
