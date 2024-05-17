@@ -102,7 +102,7 @@ footer {
     position: fixed;
     width: 100%;
     margin: 0%;
-    padding: 1%;
+    padding-left: 30px;
     left: 0;
     right: 0;
     display: flex;
@@ -205,8 +205,8 @@ footer {
 }
 
 #container img {
-  max-height: 100%;
-  display: block;
+    max-height: 100%;
+    display: block;
 }
 
 #first {
@@ -250,7 +250,6 @@ footer {
 header {
     height: 90px;
     top: 0;
-    padding-left: 2.5%;
     padding-right: 40px;
 }
 
@@ -311,9 +310,9 @@ aside {
     color: var(--almost-black);
     font-weight: 300;
     text-decoration: none;
-    display: inline-flex;
     justify-content: center;
     border-radius: 23px;
+    padding: 10px;
 }
 
 /* Styles for submenu */
@@ -347,11 +346,28 @@ aside {
     display: block;
 }
 
-.main_nav a:hover,
-a.active {
+.main_nav a.active {
     background-color: white;
     color: var(--almost-black);
 }
+
+.hover_img a {
+    position: relative;
+}
+.hover_img a span {
+    position: absolute;
+    display: none;
+    margin-top: -40px;
+    margin-left: -20px;
+}
+.hover_img a:hover span {
+    display: block;
+}
+
+.hover_img a.active {
+    background: white;
+}
+
 
 .index-nav ul {
     list-style: none; /* Remove default bullet points */
@@ -496,7 +512,6 @@ th:nth-child(1),
 td:nth-child(1) {
     width: 200px;
     font-weight: 600;
-    
 }
 
 /* Set fixed width for Column 1.5 */
@@ -789,13 +804,13 @@ textarea {
 @media screen and (max-width: 768px) {
     .main_nav {
         text-align: left; /* Center the buttons on smaller screens */
-        display: block;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .main_nav a {
-        display: block; /* Make each button stack vertically */
-        height: 20px;
-        line-height: 0;
+        padding-top: 2px;
+        padding-bottom: 2px;
     }
 
     .main_nav a:hover,
@@ -829,6 +844,14 @@ textarea {
 
     header {
         height: 180px;
+    }
+
+    .tooltips {
+        margin-top: 15px;
+    }
+
+    .tooltip .tooltiptext {
+        opacity: 0;
     }
 
     body {

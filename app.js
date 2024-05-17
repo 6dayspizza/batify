@@ -40,8 +40,8 @@ app.get('/', (req, res, next) => {
     res.redirect(307, '/welcome');
 });
 
-app.get('/welcome', function(req, res) {
-  res.render('welcome')
+app.get('/welcome', function (req, res) {
+    res.render('welcome');
 });
 
 /*
