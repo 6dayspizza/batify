@@ -347,8 +347,13 @@ aside {
 }
 
 .main_nav a.active {
-    background-color: white;
+    background-color: transparent;
     color: var(--almost-black);
+    background-image: url('arrow8.svg');
+    background-size: cover; /* Adjusts the image to cover the entire area */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center 10px; /* Centers the image within the element */
+    border-radius: 0px;
 }
 
 .hover_img a {
@@ -365,7 +370,7 @@ aside {
 }
 
 .hover_img a.active {
-    background: white;
+    /*background: transparent;*/
 }
 
 
@@ -469,17 +474,6 @@ h6 {
 }
 
 .faq {
-    text-align: left;
-    font-weight: 300;
-    padding: 1% 1.4%;
-    background-color: var(--greyish);
-    margin: 0 auto; /* Center the div horizontally */
-    color: var(--almost-black);
-    border-radius: 12px;
-    overflow: hidden;
-    font-family: 'Teachers', sans-serif;
-    font-weight: 300;
-    font-style: normal;
     display: none;
 }
 
@@ -815,8 +809,10 @@ textarea {
 
     .main_nav a:hover,
     a.active {
-        background-color: transparent;
+        background-color: white;
         color: var(--almost-black);
+        border-radius: 23px;
+        background-image: none;
     }
 
     .submenu {
@@ -825,9 +821,6 @@ textarea {
     }
 
     .submenu a {
-        display: block; /* Make each button stack vertically */
-        height: 20px;
-        line-height: 0;
         margin-left: 100px;
         background-color: transparent;
     }
