@@ -38,11 +38,11 @@ async function fetchData() {
 async function showQuote() {
     // Fetch data initially when the page loads
     const data = await fetchData();
-    const { quote } = data;
+    const { fact } = data;
 
     // Update header content with quote and author
     const quoteAuthor = document.getElementById('quoteAuthor');
-    quoteAuthor.innerHTML = `<p>${quote}</p></p>`;
+    quoteAuthor.innerHTML = `<p>${fact}</p>`;
     quoteAuthor.classList.toggle('show');
-    console.log(quote)
+    console.log(fact)
 }
