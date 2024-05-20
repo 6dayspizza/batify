@@ -349,10 +349,10 @@ aside {
 .main_nav a.active {
     background-color: transparent;
     color: var(--almost-black);
-    background-image: url('arrow8.svg');
-    background-size: cover; /* Adjusts the image to cover the entire area */
+    background-image: url('line5.svg');
+    background-size: contain; /* Adjusts the image to cover the entire area */
     background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center 10px; /* Centers the image within the element */
+    background-position: center 35px; /* Centers the image within the element */
     border-radius: 0px;
 }
 
@@ -580,8 +580,8 @@ input[type='date'],
 button,
 textarea,
 select {
-    background-color: var(--greyish);
     font-size: 18px;
+    background-color: var(--greyish);
     padding: 1%;
     font-family: inherit;
     border-radius: 30px;

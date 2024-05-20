@@ -10,7 +10,11 @@ const parse = require('csv-parse');
 const { getIcon } = require('simple-icons');
 const cors = require('cors');
 const corsOptions = {
-    origin: 'https://arcane-hollows-29475-7828051692ff.herokuapp.com', //(https://your-client-app.com)
+    origin: [
+        'https://arcane-hollows-29475-7828051692ff.herokuapp.com',
+        'http://localhost:3003',
+        'https://stormy-falls-91485-113c8c95f4d5.herokuapp.com/'
+      ],
     optionsSuccessStatus: 200,
 };
 

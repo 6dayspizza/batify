@@ -1,7 +1,7 @@
 async function handleFormSubmission() {
     // TO DO: send request to server with data of form
     //        wait for response
-    // NICE TO HAVE: spinning wheel
+    // NICE TO HAVE: spinning wheelnpm star
     try {
         const response = await sendRequest();
         handleFormResponse(response);
@@ -11,18 +11,53 @@ async function handleFormSubmission() {
     }
 }
 
-function sendRequest() {
-    // TO DO: implement later
+async function sendRequest() {
     submitFlag = true;
+    const species = document.getElementById('species').value;
+    const age = document.getElementById('age').value;
+    const condition = document.getElementById('condition').value;
+    const url = 'http://localhost:3003';
+
     return new Promise((resolve, reject) => {
-        resolve({});
+        $.ajax({
+            url: url,
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({ species: species, age: age, condition: condition }),
+            success: function(response) {
+                resolve(response);
+            },
+            error: function(error) {
+                reject(error);
+            }
+        });
+    }).then(response => {
+        console.log('Response from microserviceB:', response);
+        return response;
+    }).catch(error => {
+        console.error('Error:', error);
     });
+
+    console.log('Request data:', condition, species, age);
 }
+
+async function showRecommendation() {
+    // Fetch data initially when the page loads
+    const data = await sendRequest();
+    const { foodValue } = data;
+
+    // Update header content with quote and author
+    const showMealPlan = document.getElementById('mealplan');
+    showMealPlan.innerHTML = `<p>${foodValue}</p>`;
+
+    showform('recommendation');
+}
+
 
 function handleFormResponse(response) {
     // TO DO: implement later
     // if response pos: go to next page, deactivate tinker-guard
-    showform('recommendation');
+    
 }
 
 function showform(dostuff) {

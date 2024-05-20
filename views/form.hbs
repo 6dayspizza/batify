@@ -1,12 +1,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 {{> header}}
 
-<!--     
-    Citation for the following function: 
-    Date: 10/12/2023
-    Partially based on: code from Dr. Curry
-    Source URL: https://github.com/osu-cs340-ecampus/nodejs-starter-app 
--->
 
 <body>
 
@@ -70,10 +64,9 @@
                 <td class="center-text">|</td>
                 <td class="align-left">
                     <select id="age" name="age" class="select2">
-                        <option value="unknown">unknown</option>
+                        <option value="adult">adult</option>
                         <option value="baby">baby</option>
                         <option value="teenager">teenager</option>
-                        <option value="adult">adult</option>
                     </select>
                 </td>
             </tr>
@@ -242,7 +235,7 @@
       </div>
     <div class="space"></div>
         <div class="flex-container">
-    <button class="back" onClick="nextPage('page3')">BACK</button><button class="next" onClick="handleFormSubmission()">FINISH</button>
+    <button class="back" onClick="nextPage('page3')">BACK</button><button class="next" onClick="showRecommendation()">FINISH</button>
 </div>
   </div>
 
@@ -267,7 +260,7 @@
                 <tr>
                     <td class="align-right">meal plan</td>
                     <td class="center-text">|</td>
-                    <td class="align-left"></td>
+                    <td class="align-left" id="mealplan"></td>
                 </tr>
                 <tr>
                     <td class="align-right">assigned volunteer</td>
