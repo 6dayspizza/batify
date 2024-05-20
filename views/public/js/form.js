@@ -44,11 +44,12 @@ async function sendRequest() {
 async function showRecommendation() {
     // Fetch data initially when the page loads
     const data = await sendRequest();
-    const { foodValue } = data;
+    const { foodValue, sizecat } = data;
 
-    // Update header content with quote and author
     const showMealPlan = document.getElementById('mealplan');
+    const showBoxSize = document.getElementById('box');
     showMealPlan.innerHTML = `<p>${foodValue}</p>`;
+    showBoxSize.innerHTML = `<p>${sizecat}</p>`;
 
     showform('recommendation');
 }
