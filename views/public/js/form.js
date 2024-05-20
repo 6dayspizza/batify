@@ -47,7 +47,7 @@ async function showRecommendation() {
 
     const showMealPlan = document.getElementById('mealplan');
     const showBoxSize = document.getElementById('box');
-    showMealPlan.innerHTML = `<p>${foodValue}</p>`;
+    showMealPlan.innerHTML = `<p>${foodValue} <img src="/icons/tool.svg" height="15"></img></p>`;
     showBoxSize.innerHTML = `<p>${box}</p>`;
 
     showform('recommendation');
