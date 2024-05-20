@@ -16,7 +16,7 @@ async function sendRequest() {
     const species = document.getElementById('species').value;
     const age = document.getElementById('age').value;
     const condition = document.getElementById('condition').value;
-    const url = 'http://localhost:3003';
+    const url = 'https://stormy-falls-91485-113c8c95f4d5.herokuapp.com';
 
     return new Promise((resolve, reject) => {
         $.ajax({
