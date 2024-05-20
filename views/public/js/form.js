@@ -12,47 +12,45 @@ async function handleFormSubmission() {
 }
 
 async function sendRequest() {
+    submitFlag = true;
     const species = document.getElementById('species').value;
     const age = document.getElementById('age').value;
     const condition = document.getElementById('condition').value;
     const url = 'https://stormy-falls-91485-113c8c95f4d5.herokuapp.com';
+    /*const url = 'http://localhost:3003/';*/
 
-    try {
-        const response = await $.ajax({
+    return new Promise((resolve, reject) => {
+        $.ajax({
             url: url,
             type: 'POST',
             contentType: 'application/json',
             data: JSON.stringify({ species: species, age: age, condition: condition }),
+            success: function(response) {
+                resolve(response);
+            },
+            error: function(error) {
+                reject(error);
+            }
         });
+    }).then(response => {
         console.log('Response from microserviceB:', response);
         return response;
-    } catch (error) {
+    }).catch(error => {
         console.error('Error:', error);
-        throw error; // Propagate the error for handling in showRecommendation
-    }
+    });
 }
 
 async function showRecommendation() {
-    try {
-        const data = await sendRequest();
-        
-        if (!data || !data.foodValue) {
-            console.error('Invalid response from server:', data);
-            return; // Exit early if data or foodValue is missing
-        }
-        
-        const { foodValue, sizecat } = data;
+    // Fetch data initially when the page loads
+    const data = await sendRequest();
+    const { foodValue, box } = data;
 
-        // Update HTML elements with foodValue and sizecat
-        document.getElementById('meal-plan').textContent = foodValue;
-        document.getElementById('sizecat').textContent = sizecat;
+    const showMealPlan = document.getElementById('mealplan');
+    const showBoxSize = document.getElementById('box');
+    showMealPlan.innerHTML = `<p>${foodValue}</p>`;
+    showBoxSize.innerHTML = `<p>${box}</p>`;
 
-        // Display recommendation section
-        showform('recommendation');
-    } catch (error) {
-        console.error('Error:', error);
-        // Handle the error as needed
-    }
+    showform('recommendation');
 }
 
 
