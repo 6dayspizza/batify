@@ -82,8 +82,8 @@
                 <td class="center-text">|</td>
                 <td class="align-left">
                     <select id="condition" name="condition" class="select2">
-                        <option value="underweight">underweight</option>
                         <option value="optimal">optimal</option>
+                        <option value="underweight">underweight</option>
                         <option value="overweight">overweight</option>
                     </select>
                 </td>
@@ -132,32 +132,12 @@
     <div class="flex-container">
         <div></div>
                    <p>1/2</p>
-    <button class="next" onClick="nextPage('page4')" id="gotosummary">GO TO SUM</button>
+    <button class="next" onClick="nextPage('page4')" id="gotosummary">NEXT</button>
     </div>
 
     </div>
-  
-  {{!-- DISPLAY PAGE 2 OF FORM --}}
-  <div id="page2" style="display: none">
-    <div class="background">
-      </div>
-    <div class="space"></div>
-        <div class="flex-container">
-    <button class="back" onClick="nextPage('page1')">BACK</button><p>2/3</p><button class="next" onClick="nextPage('page3')">NEXT</button>
-  </div>
-  </div>
 
-  {{!-- DISPLAY PAGE 3 OF FORM --}}
-  <div id="page3" style="display: none">
-        <div class="background">
-    </div>
-    <div class="space"></div>
-        <div class="flex-container">
-          <button class="back" onClick="nextPage('page2')">BACK</button><p>3/3</p><button class="next" onClick="nextPage('page4')" id="gotosummary" >GO TO SUM</button>
-  </div>
-  </div>
-
-  {{!-- DISPLAY PAGE 4 OF FORM --}}
+  {{!-- DISPLAY SUMMARY OF FORM --}}
   <div id="page4" style="display: none">
     <div class="background">
                 <table>
@@ -213,11 +193,11 @@
       </div>
     <div class="space"></div>
         <div class="flex-container">
-    <button class="back" onClick="nextPage('page1')">BACK</button><p>2/2</p>><button class="next" onClick="showRecommendation()">FINISH</button>
+    <button class="back" onClick="nextPage('page1')">BACK</button><p>2/2</p><button class="next" onClick="showRecommendation()">FINISH</button>
 </div>
   </div>
 
-  {{!-- DISPLAY SUMMARY OF FORM --}}
+  {{!-- DISPLAY RECOMMENDATION OF FORM --}}
   <div id="recommendation" style="display: none">
             <div class="space"></div>
         <div class="background">
