@@ -809,7 +809,6 @@ textarea {
 
     .main_nav a:hover,
     a.active {
-        background-color: white;
         color: var(--almost-black);
         border-radius: 23px;
         background-image: none;
