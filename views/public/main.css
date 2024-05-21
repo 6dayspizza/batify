@@ -777,8 +777,8 @@ option {
 }
 textarea {
 }
-:focus {
-    background-color: HoneyDew;
+/*:focus {
+    background-color: HoneyDew;*/
 }
 *:required {
     border: 2px solid green;
