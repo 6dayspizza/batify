@@ -11,6 +11,22 @@ async function handleFormSubmission() {
     }
 }
 
+async function convertMealworms(mealworms) {
+    const inputValue = mealworms;
+    const conversionType = 'mwtobuf';
+
+    const response = await fetch(`https://convert-micro.onrender.com/${conversionType}?num=${inputValue}`);
+    const responseData = await response.json();
+
+    console.log('Conversion result:', responseData);
+
+    const popup = document.getElementById('ConversionPopup');
+    popup.innerHTML = `<span>This converts to approximately ${responseData.buffalos} grams of buffalo worms.</span>`;
+
+    // Show the popup (optional: if you want to display it immediately)
+    popup.classList.add('show');
+}
+
 async function sendRequest() {
     submitFlag = true;
     const species = document.getElementById('species').value;
@@ -43,11 +59,21 @@ async function sendRequest() {
 async function showRecommendation() {
     // Fetch data initially when the page loads
     const data = await sendRequest();
-    const { foodValue, box } = data;
+    const { foodValueCombined, box, foodValue } = data;
 
     const showMealPlan = document.getElementById('mealplan');
     const showBoxSize = document.getElementById('box');
-    showMealPlan.innerHTML = `<p>${foodValue} <img src="/icons/tool.svg" height="15"></img></p>`;
+    showMealPlan.innerHTML = `<p>${foodValueCombined}
+        <div class="tooltip">
+            <button id="popupTriggerConversion" class="popup" onclick="convertMealworms(${foodValue})">
+                <img src="/icons/tool.svg"></img>
+                <div id="ConversionPopup" class="popuptext">
+                    <span>what goes here?</span>
+                </div>
+            </button>
+            <span class="tooltiptext">not enough mealworms? click for conversion to buffalo worms.</span>
+        </div>
+    </p>`;
     showBoxSize.innerHTML = `<p>${box}</p>`;
 
     showform('recommendation');
