@@ -349,7 +349,7 @@ aside {
 .main_nav a.active {
     background-color: transparent;
     color: var(--almost-black);
-    background-image: url('line5.svg');
+    background-image: url('underline.svg');
     background-size: contain; /* Adjusts the image to cover the entire area */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-position: center 35px; /* Centers the image within the element */
@@ -362,8 +362,8 @@ aside {
 .hover_img a span {
     position: absolute;
     display: none;
-    margin-top: -40px;
-    margin-left: -20px;
+    margin-top: -35px;
+    margin-left: -10px;
 }
 .hover_img a:hover span {
     display: block;
