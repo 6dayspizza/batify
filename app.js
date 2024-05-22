@@ -13,7 +13,8 @@ const corsOptions = {
     origin: [
         'https://arcane-hollows-29475-7828051692ff.herokuapp.com',
         'http://localhost:3003',
-        'https://stormy-falls-91485-113c8c95f4d5.herokuapp.com'
+        'https://stormy-falls-91485-113c8c95f4d5.herokuapp.com',
+        'https://desolate-sands-39354-a2c7863a83bc.herokuapp.com/'
       ],
     optionsSuccessStatus: 200,
 };

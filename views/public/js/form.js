@@ -64,6 +64,8 @@ async function showRecommendation() {
 
     const showMealPlan = document.getElementById('mealplan');
     const showBoxSize = document.getElementById('box');
+    const volunteerDetails = document.getElementById('volunteer');
+
     if (foodValue!== null) {
         showMealPlan.innerHTML = `
         <div class="meal-plan-container">
@@ -82,6 +84,23 @@ async function showRecommendation() {
         showMealPlan.innerHTML = `<p>${foodValueCombined}</p>`;
     };
     showBoxSize.innerHTML = `<p>${box}</p>`;
+
+    try {
+        const volunteerResponse = await fetch('https://desolate-sands-39354-a2c7863a83bc.herokuapp.com/');
+        const volunteerData = await volunteerResponse.json();
+        const { name, email } = volunteerData;
+
+        volunteerDetails.innerHTML = `
+            <div class="meal-plan-container">
+                <span>${name}</span>
+                <span><a href="mailto:${email}?subject=new bat!&body=There has been a new bat assigned to you. Please check your schedule.">
+                    <button id="btnOutlook" class="confirm">notify</button>
+                </a></span>
+            </div>`;
+    } catch (error) {
+        console.error('Error fetching volunteer data:', error);
+        volunteerDetails.innerHTML = `<p>Error fetching volunteer data</p>`;
+    }
 
     showform('recommendation');
 }
