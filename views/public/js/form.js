@@ -12,6 +12,7 @@ async function handleFormSubmission() {
 }
 
 async function convertMealworms(mealworms) {
+    console.log(mealworms);
     const inputValue = mealworms;
     const conversionType = 'mwtobuf';
 
@@ -63,17 +64,21 @@ async function showRecommendation() {
 
     const showMealPlan = document.getElementById('mealplan');
     const showBoxSize = document.getElementById('box');
-    showMealPlan.innerHTML = `<p>${foodValueCombined}
-        <div class="tooltip">
-            <button id="popupTriggerConversion" class="popup" onclick="convertMealworms(${foodValue})">
-                <img src="/icons/tool.svg"></img>
-                <div id="ConversionPopup" class="popuptext">
-                    <span>what goes here?</span>
-                </div>
-            </button>
-            <span class="tooltiptext">not enough mealworms? click for conversion to buffalo worms.</span>
-        </div>
-    </p>`;
+    if (foodValue!== null) {
+        showMealPlan.innerHTML = `<p>${foodValueCombined}
+            <div class="tooltip">
+                <button id="popupTriggerConversion" class="popup" onclick="convertMealworms(${foodValue})">
+                    <img src="/icons/tool.svg"></img>
+                    <div id="ConversionPopup" class="popuptext">
+                        <span>what goes here?</span>
+                    </div>
+                </button>
+                <span class="tooltiptext">not enough mealworms? click for conversion to buffalo worms.</span>
+            </div>
+        </p>`;
+    } else {
+        showMealPlan.innerHTML = `<p>${foodValueCombined}</p>`;
+    };
     showBoxSize.innerHTML = `<p>${box}</p>`;
 
     showform('recommendation');
