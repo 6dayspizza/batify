@@ -65,7 +65,9 @@ async function showRecommendation() {
     const showMealPlan = document.getElementById('mealplan');
     const showBoxSize = document.getElementById('box');
     if (foodValue!== null) {
-        showMealPlan.innerHTML = `<p>${foodValueCombined}
+        showMealPlan.innerHTML = `
+        <div class="meal-plan-container">
+            <span>${foodValueCombined}</span>
             <div class="tooltip">
                 <button id="popupTriggerConversion" class="popup" onclick="convertMealworms(${foodValue})">
                     <img src="/icons/tool.svg"></img>
@@ -75,7 +77,7 @@ async function showRecommendation() {
                 </button>
                 <span class="tooltiptext">not enough mealworms? click for conversion to buffalo worms.</span>
             </div>
-        </p>`;
+        </div>`;
     } else {
         showMealPlan.innerHTML = `<p>${foodValueCombined}</p>`;
     };
