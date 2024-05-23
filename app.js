@@ -88,17 +88,21 @@ app.get('/about', function (req, res) {
     });
 });
 
+app.get('/background', function (req, res) {
+    res.render('background', {
+        active: { background: true, about: true },
+    });
+});
+
 app.get('/features', function (req, res) {
     res.render('features', {
-        active: { features: true },
-        active: { about: true },
+        active: { features: true, about: true  },
     });
 });
 
 app.get('/roadmap', function (req, res) {
     res.render('roadmap', {
-        active: { roadmap: true },
-        active: { about: true },
+        active: { roadmap: true, about: true  },
     });
 });
 

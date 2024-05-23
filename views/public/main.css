@@ -375,6 +375,16 @@ aside {
     display: block;
 }
 
+.submenu a.active {
+    background-color: transparent;
+    color: var(--almost-black);
+    background-image: url('underline.svg');
+    background-size: contain; /* Adjusts the image to cover the entire area */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center 35px; /* Centers the image within the element */
+    border-radius: 0px;
+}
+
 .main_nav a.active {
     background-color: transparent;
     color: var(--almost-black);
@@ -459,6 +469,12 @@ aside {
   .about-image img {
     max-width: 80%;
     height: auto;
+  }
+
+  .about-image {
+    max-width: 50%;
+    height: auto;
+    min-width: 50%;
   }
   
   .about-text {

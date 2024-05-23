@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function enterSite() {
-    window.location.href = '/form';
+    window.location.href = '/background';
 }
 
 async function fetchData() {
