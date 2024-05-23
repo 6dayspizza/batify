@@ -947,6 +947,12 @@ textarea {
         width: 100%; /* Ensure image takes full width on mobile */
       }
 
+      .about-image {
+        max-width: 100%;
+        height: auto;
+        min-width: 0%;
+      }
+
       #container {
         flex-direction: column; /* Stack elements vertically on smaller screens */
         align-items: center; /* Center align the items */
