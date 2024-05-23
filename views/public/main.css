@@ -52,8 +52,21 @@ body.dark-mode .main_nav a {
 
 body.dark-mode .main_nav a:hover,
 a.active {
-    background-color: var(--almost-black);
-    color: var(--almost-black);
+}
+
+
+body.dark-mode .submenu a {
+    color: var(--greyish);
+    font-weight: 400;
+    text-decoration: none;
+    padding: 0px 24px;
+    margin-right: 10px;
+    height: 50px;
+    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    line-height: 47px;
+    border-radius: 25px;
 }
 
 .darker {
@@ -66,6 +79,10 @@ a.active {
     font-weight: bold;
     text-decoration: none;
     padding: 3px 12px;
+}
+
+body.dark-mode .table {
+    color: var(--almost-black);
 }
 
 .toggle-icon {
